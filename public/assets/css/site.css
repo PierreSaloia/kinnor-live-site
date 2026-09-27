@@ -3092,3 +3092,35 @@ main > .section:not(:first-child) {
   content-visibility: auto;
   contain-intrinsic-size: auto 900px;
 }
+.team-install {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px;
+  padding: 22px 24px;
+  color: inherit;
+  border-color: rgba(245, 165, 36, 0.35);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.team-install:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.team-install > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+.team-install strong {
+  font-size: 1.12rem;
+}
+.team-install span {
+  color: var(--muted);
+}
+.team-install > .icon {
+  color: var(--gold);
+  width: 22px;
+  height: 22px;
+}

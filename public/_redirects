@@ -8,12 +8,12 @@
 
 /baixar                    /download                           301
 /downloads                 /download                           301
-/instalar                  /download#instalar                  301
+/instalar                  /equipe                             301
 /windows                   /download#windows                   301
 /app                       /download#android                   301
 /android                   /download#android                   301
 /apk                       /download#android                   301
-/iphone                    /download#iphone                    301
+/iphone                    /equipe#parte-3                     301
 /ios                       /download#iphone                    301
 
 /camera                    /camera-para-igreja                 301
@@ -52,3 +52,7 @@
 /suporte.html                            /suporte                                 301
 /privacidade.html                        /privacidade                             301
 /termos.html                             /termos                                  301
+
+# Página de testes da equipe (remover junto com equipe.html)
+/instalacao                /equipe                             301
+/altstore                  /equipe#parte-3                     301
