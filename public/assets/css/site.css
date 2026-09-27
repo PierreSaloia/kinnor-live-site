@@ -3124,3 +3124,20 @@ main > .section:not(:first-child) {
   width: 22px;
   height: 22px;
 }
+.apoio-iphone {
+  margin-top: 56px;
+  scroll-margin-top: 100px;
+}
+.apoio-iphone .subhead {
+  margin-top: 0;
+}
+.dl-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0 18px;
+}
+.callout a {
+  color: #8ebaff;
+  text-decoration: underline;
+}

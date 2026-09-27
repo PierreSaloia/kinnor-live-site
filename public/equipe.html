@@ -26,8 +26,8 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="preload" href="assets/fonts/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/fonts/outfit-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="assets/css/site.css?v=6600db812e" data-asset />
-    <script type="module" src="assets/js/main.js?v=6600db812e" data-asset></script>
+    <link rel="stylesheet" href="assets/css/site.css?v=5a8c7a896b" data-asset />
+    <script type="module" src="assets/js/main.js?v=5a8c7a896b" data-asset></script>
   </head>
   <body>
     <!-- CABEÇALHO -->
@@ -70,7 +70,7 @@
           </p>
           <div class="callout">
             <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#shield"></use></svg>
-            <p>Esta página é só para testes: ela não aparece no Google nem no menu do site. Versão dos arquivos: <strong><span data-version>1.1.2</span></strong>.</p>
+            <p>Esta página é só para testes: ela não aparece no Google nem no menu do site. Versão dos arquivos: <strong><span data-version>1.1.2</span></strong>. Vai usar iPhone? Veja os <a href="#apoio-iphone">programas para instalar no iPhone</a> e a <a href="#parte-3">Parte 3</a>.</p>
           </div>
         </div>
       </section>
@@ -113,23 +113,40 @@
             </article>
           </div>
 
-          <h3 class="subhead">Programas de apoio (só para os iPhones)</h3>
-          <p class="muted">Instale no notebook da igreja apenas se for usar iPhones. São programas gratuitos, baixados do site oficial de cada um.</p>
-          <div class="use-grid">
-            <a class="card tool-link" href="https://www.apple.com/itunes/download/win64" target="_blank" rel="noopener">
-              <strong>1 · iTunes (Apple)</strong>
-              <span>Versão do site da Apple, 64 bits. Não use a da Microsoft Store.</span>
-            </a>
-            <a class="card tool-link" href="https://updates.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe" target="_blank" rel="noopener">
-              <strong>2 · iCloud para Windows (Apple)</strong>
-              <span>Versão do site da Apple. Não precisa entrar com conta.</span>
-            </a>
-            <a class="card tool-link" href="https://cdn.altstore.io/file/altstore/altinstaller.zip" target="_blank" rel="noopener">
-              <strong>3 · AltServer (AltStore)</strong>
-              <span>Leva o AltStore para o iPhone pelo cabo. Site: altstore.io</span>
-            </a>
+          <div id="apoio-iphone" class="apoio-iphone">
+            <h2 class="subhead">Programas para instalar no iPhone</h2>
+            <p class="muted">Baixe e instale no <strong>notebook da igreja</strong>, nesta ordem, só se for usar iPhones. São gratuitos e vêm do site oficial de cada um. No iPhone não precisa baixar nada além do app (Parte 3).</p>
+            <div class="use-grid">
+              <article class="card install-file">
+                <div class="feature-icon blue"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#apple"></use></svg></div>
+                <h3>1 · iTunes</h3>
+                <p>Da Apple, para Windows 64 bits (~200 MB). Use este, não o da Microsoft Store.</p>
+                <a class="button button-ghost full" href="https://www.apple.com/itunes/download/win64" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+                Baixar iTunes
+              </a>
+              </article>
+              <article class="card install-file">
+                <div class="feature-icon blue"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#apple"></use></svg></div>
+                <h3>2 · iCloud para Windows</h3>
+                <p>Da Apple (~160 MB). Só precisa estar instalado; não precisa entrar com conta.</p>
+                <a class="button button-ghost full" href="https://updates.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+                Baixar iCloud
+              </a>
+              </article>
+              <article class="card install-file">
+                <div class="feature-icon amber"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg></div>
+                <h3>3 · AltServer</h3>
+                <p>Do AltStore (~12 MB, arquivo .zip). É ele que leva o AltStore para o iPhone pelo cabo.</p>
+                <a class="button button-ghost full" href="https://cdn.altstore.io/file/altstore/altinstaller.zip" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+                Baixar AltServer
+              </a>
+              </article>
+            </div>
+            <p class="muted small-note">Se o AltStore não der certo, a alternativa é o <a href="https://sideloadly.io/SideloadlySetup64.exe" target="_blank" rel="noopener">Sideloadly para Windows</a> (sideloadly.io): instala o arquivo do app direto do notebook, pelo cabo. Também precisa do iTunes e do iCloud acima.</p>
           </div>
-          <p class="muted small-note">Alternativa, se o AltStore não der certo: <a href="https://sideloadly.io/SideloadlySetup64.exe" target="_blank" rel="noopener">Sideloadly para Windows</a> (sideloadly.io), que instala o .ipa direto do computador.</p>
         </div>
       </section>
 
@@ -196,7 +213,13 @@
           <ol class="guide-steps prose">
             <li>
               <h3>No notebook (uma vez só)</h3>
-              <p>Instale o <strong>iTunes</strong> e depois o <strong>iCloud</strong> pelos links “Programas de apoio” acima (reinicie se pedir). Extraia o <strong>altinstaller.zip</strong> e rode o Setup. Abra o <strong>AltServer</strong> como administrador; um ícone de losango aparece perto do relógio. Clique nele e marque <strong>Launch at Login</strong>.</p>
+              <p>Baixe e instale, nesta ordem (reinicie se pedir):</p>
+              <div class="dl-row">
+                <a class="button button-sm" href="https://www.apple.com/itunes/download/win64" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>1 · iTunes</a>
+                <a class="button button-sm" href="https://updates.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>2 · iCloud</a>
+                <a class="button button-sm" href="https://cdn.altstore.io/file/altstore/altinstaller.zip" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>3 · AltServer</a>
+              </div>
+              <p>Clique com o botão direito no <strong>altinstaller.zip</strong> › <strong>Extrair tudo</strong> e rode o <strong>Setup.exe</strong> de dentro. Depois, no menu Iniciar, digite “AltServer” › <strong>Executar como administrador</strong> (se o Firewall perguntar, permita em redes privadas). Um ícone de losango aparece perto do relógio: clique nele e marque <strong>Launch at Login</strong>.</p>
             </li>
             <li>
               <h3>Ligue o iPhone no notebook</h3>
