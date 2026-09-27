@@ -34,7 +34,8 @@ for (const f of textFiles.filter((x) => /\.(html|css|js)$/.test(x))) {
     for (let u of raw.split(',').map((s) => s.trim().split(/\s+/)[0])) {
       if (!u || u.startsWith('#') || u.startsWith('data:') || u.startsWith('mailto:') || u.startsWith('tel:') || u.startsWith('javascript:') || u.includes('${')) continue;
       if (/^https?:\/\//.test(u)) {
-        if (!/kinnorlive\.com\.br|schema\.org|w3\.org/.test(u) && /^(href|src)/.test(m[0]) ) problems.push(`externo em ${rel(f)}: ${u}`);
+        const allowed = /kinnorlive\.com\.br|workers\.dev|pages\.dev|github\.com\/PierreSaloia\/kinnor-live-site\/releases|mercadopago\.com\.br|apple\.com|cdn-apple\.com|altstore\.io|sideloadly\.io|schema\.org|w3\.org/;
+        if (!allowed.test(u) && /^(href|src)/.test(m[0])) problems.push(`externo em ${rel(f)}: ${u}`);
         if (/^src|url\(/.test(m[0]) && /^https?:/.test(u)) problems.push(`recurso externo carregado em ${rel(f)}: ${u}`);
         continue;
       }
@@ -43,8 +44,8 @@ for (const f of textFiles.filter((x) => /\.(html|css|js)$/.test(x))) {
       const clean = u.split('#')[0].split('?')[0];
       if (!clean) continue;
       const target = clean.startsWith('/') ? path.join(root, clean) : path.join(path.dirname(f), clean);
-      let ok = fs.existsSync(target);
-      if (ok && fs.statSync(target).isDirectory()) ok = fs.existsSync(path.join(target, 'index.html'));
+      let ok = fs.existsSync(target) || (!path.extname(target) && fs.existsSync(`${target}.html`));
+      if (ok && fs.existsSync(target) && fs.statSync(target).isDirectory()) ok = fs.existsSync(path.join(target, 'index.html'));
       if (!ok) problems.push(`quebrado em ${rel(f)}: ${u}`);
     }
   }

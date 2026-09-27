@@ -1,28 +1,55 @@
 # Kinnor Live — guia do site
 
-Este é o site oficial do Kinnor Live. Tudo que vai para a internet fica em `public/`. A pasta `_material/` guarda imagens e fontes originais de referência; não altere essa pasta. Os instaladores ficam em `public/downloads/`.
+Site oficial do Kinnor Live. Está no ar em **https://kinnor-live.servidor-doacoes.workers.dev**
+(endereço provisório da Cloudflare, até ligar o domínio próprio).
 
-## Ver no computador
+## As pastas
 
-Dê dois cliques em `VER-SITE.bat`. Ele escolhe uma porta livre, abre o navegador no endereço mostrado na janela preta e mantém o servidor local enquanto a janela estiver aberta. Não precisa instalar pacotes. Para parar, feche a janela.
+| Pasta / arquivo | O que é |
+|---|---|
+| `public\` | o site que vai para a internet (páginas `.html`, estilos, scripts e imagens) |
+| `public\assets\js\config.js` | **o único arquivo de configuração**: versão, links das lojas, doação, contato, Google |
+| `instaladores\` | os instaladores (.exe, .apk, .ipa). Ficam só neste computador; vão para o GitHub pelo `PUBLICAR.bat` |
+| `ferramentas\` | os programas que os `.bat` usam |
+| `_material\` | material de referência (logo, fotos, telas do programa) |
 
-## Trocar informações do site
+## O dia a dia (dois cliques)
 
-Abra `public/assets/js/config.js` em um editor de texto. Esse é o lugar para mudar a versão, arquivos de download, links das lojas, Pix, link de cartão do Mercado Pago e canais de contato. Deixe um campo vazio quando ele ainda não existir: o site mostrará uma mensagem adequada. Use links completos começando com `https://` para as lojas, cartão e redes sociais. Para WhatsApp, informe o número com código do país, por exemplo `5511999999999`.
+| Arquivo | Quando usar |
+|---|---|
+| `VER-SITE.bat` | ver o site no seu computador antes de publicar |
+| `ATUALIZAR-SITE.bat` | depois de mudar o `config.js` ou alguma página: aplica as mudanças em todas as páginas |
+| `ATUALIZAR-VERSAO.bat` | saiu versão nova do Kinnor Live (veja abaixo) |
+| `PUBLICAR.bat` | colocar no ar: GitHub, instaladores e Cloudflare, tudo de uma vez |
+| `GERAR-PIX.bat` | opcional: QR Code de Pix direto no site (se preencher `doacao.pix`) |
 
-O domínio usado em SEO está no campo `site.url`. Depois de alterá-lo, dê dois cliques em `CONFIGURAR-DOMINIO.bat` para atualizar as URLs estáticas de todas as páginas, do mapa do site e do `robots.txt`.
+## Trocar informações
 
-Os arquivos HTML em `public/` são os originais editáveis do site. Edite o conteúdo diretamente neles. Não há gerador de páginas nem etapa de build na hospedagem.
+Abra `public\assets\js\config.js` no Bloco de Notas, mude e salve. Depois: `ATUALIZAR-SITE.bat` e `PUBLICAR.bat`.
 
-## Ativar o Pix
+- **Lojas:** quando o app sair na Google Play ou na App Store, cole o link em `android.playStore` / `ios.appStore`.
+  Os selos passam a abrir a loja; enquanto estão vazios, mostram o aviso “Chegando à loja”.
+- **Contato:** preencha `contato.email`, `contato.whatsapp` (ex.: `5511999999999`), `instagram`, `youtube`.
+  Aparece no Suporte, na Privacidade e no rodapé. **As lojas exigem um contato na política de privacidade.**
+- **Doação:** `doacao.pagina` já aponta para a página do Mercado Pago (Pix e cartão).
+- **Google:** veja “Google Search Console e Analytics” em `PUBLICAR.md`.
+- **Domínio próprio:** mude `site.url` (ex.: `https://www.kinnorlive.com.br`) e siga `PUBLICAR.md`.
 
-Preencha `doacao.pix.chave`, `nome` e `cidade` no `config.js`. Dê dois cliques em `GERAR-PIX.bat`: ele cria `public/assets/img/pix-qr.svg`. O QR Code não tem valor fixo; o doador informa o valor no banco. O texto “copia e cola” no site inclui o valor escolhido. Ao trocar a chave ou os dados, execute o arquivo `.bat` novamente. O gerador usa o pacote `qrcode` já presente na pasta `desktop/node_modules` do projeto no computador original.
+## Nova versão do Kinnor Live
 
-## Lançar uma nova versão
+1. Copie os instaladores novos para a pasta `instaladores\`, com estes nomes:
+   `KinnorLive-Setup-X.Y.Z.exe`, `KinnorLive-Android-X.Y.Z.apk` e (opcional) `KinnorLive-iPhone-X.Y.Z-sem-assinatura.ipa`.
+2. Dois cliques em `ATUALIZAR-VERSAO.bat`: ele atualiza versão, data e tamanhos em todas as páginas.
+3. Escreva as novidades em `public\download.html` (seção “O que mudou nesta versão”).
+4. Dois cliques em `PUBLICAR.bat`: ele cria a Release no GitHub com os instaladores e publica o site.
 
-1. Copie os novos arquivos `.exe` e `.apk` para `public/downloads/`, com nomes `KinnorLive-Setup-X.Y.Z.exe` e `KinnorLive-Android-X.Y.Z.apk`.
-2. Dê dois cliques em `ATUALIZAR-VERSAO.bat`. Ele identifica a versão mais recente e atualiza nome, tamanho em bytes, SHA-256 e data em `config.js`. Exige que as duas versões tenham o mesmo número. Também pode ser executado com `node ferramentas/atualizar-versao.js --data AAAA-MM-DD`.
-3. Atualize o texto de novidades em `public/download.html`. Atualize também a versão no JSON-LD de `public/index.html` e os links de fallback dos instaladores nos arquivos HTML.
-4. Teste com `VER-SITE.bat` e `node ferramentas/verificar-links.js` antes de publicar.
+## Editar textos
 
-O script não apaga os arquivos antigos. Os botões usam os caminhos configurados no `config.js` quando o JavaScript carrega. Se o download ficar hospedado em outro serviço, coloque a URL completa no campo `arquivo` ou `apk` do `config.js`.
+As páginas são arquivos `.html` comuns em `public\`, com comentários marcando cada seção.
+O **cabeçalho e o rodapé** são editados só em `public\index.html`: o `ATUALIZAR-SITE.bat` copia para as outras páginas.
+As **perguntas frequentes** de cada página viram dados para o Google automaticamente.
+
+## Página da equipe (testes)
+
+`https://kinnor-live.servidor-doacoes.workers.dev/equipe` — instaladores de Windows, Android e iPhone
+com o passo a passo. Não aparece no Google nem no menu. Para tirar do ar: apague `public\equipe.html` e publique.

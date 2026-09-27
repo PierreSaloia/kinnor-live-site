@@ -40,3 +40,15 @@
 /privacy                   /privacidade                        301
 /politica-de-privacidade   /privacidade                        301
 /termos-de-uso             /termos                             301
+
+# Endereços antigos com .html → endereço amigável (permanente)
+/index.html                              /                                        301
+/download.html                           /download                                301
+/camera-para-igreja.html                 /camera-para-igreja                      301
+/stories-com-audio-da-mesa.html          /stories-com-audio-da-mesa               301
+/transmissao-ao-vivo-para-igrejas.html   /transmissao-ao-vivo-para-igrejas        301
+/retorno-de-audio-no-celular.html        /retorno-de-audio-no-celular             301
+/como-transmitir-culto-com-celular.html  /como-transmitir-culto-com-celular       301
+/suporte.html                            /suporte                                 301
+/privacidade.html                        /privacidade                             301
+/termos.html                             /termos                                  301

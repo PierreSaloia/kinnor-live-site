@@ -4,8 +4,8 @@ Site oficial do **Kinnor Live — Sua igreja ao vivo**: programa gratuito para i
 celulares da equipe em câmeras sem fio, leva o som da mesa para os fones e para os stories e transmite
 o culto ao vivo para várias redes ao mesmo tempo.
 
-- Site: https://kinnor-live.pages.dev
-- Downloads: https://kinnor-live.pages.dev/download (os instaladores ficam nas [Releases](../../releases))
+- Site: https://kinnor-live.servidor-doacoes.workers.dev
+- Downloads: https://kinnor-live.servidor-doacoes.workers.dev/download (os instaladores ficam nas [Releases](../../releases))
 
 ## Estrutura
 

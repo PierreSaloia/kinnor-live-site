@@ -1,0 +1,17 @@
+// Hospedagem do site na Cloudflare (Workers com arquivos estáticos).
+// Publicar: PUBLICAR.bat (ou: npx wrangler@4 deploy).
+{
+  "name": "kinnor-live",
+  "compatibility_date": "2026-09-26",
+  "assets": {
+    "directory": "public",
+    // /download serve download.html e /download.html vira /download.
+    "html_handling": "auto-trailing-slash",
+    // Endereços que não existem mostram a página 404.html (com status 404).
+    "not_found_handling": "404-page"
+  },
+  // Endereço provisório *.workers.dev. Quando o domínio próprio estiver ligado,
+  // o ATUALIZAR-SITE.bat desliga este endereço (false) para o Google ver só o oficial.
+  "workers_dev": true,
+  "observability": { "enabled": true }
+}

@@ -191,7 +191,7 @@ function faqSchema(html) {
   fs.writeFileSync(path.join(root, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`, 'utf8');
 
   // _headers (Cloudflare Pages): segurança e cache.
-  const pagesDev = /\.pages\.dev$/.test(siteUrl.hostname);
+  const provisional = /\.(workers|pages)\.dev$/.test(siteUrl.hostname);
   const headers = [
     '# Gerado pelo ATUALIZAR-SITE.bat (ferramentas/sincronizar.js). Não edite à mão.',
     '/*',
@@ -217,11 +217,14 @@ function faqSchema(html) {
     '  Cache-Control: public, max-age=3600',
     '',
   ];
-  if (!pagesDev) {
-    headers.push('# Endereço provisório da Cloudflare fora do Google (o oficial é o domínio próprio).',
-      'https://:project.pages.dev/*', '  X-Robots-Tag: noindex', '');
-  }
   fs.writeFileSync(path.join(root, '_headers'), headers.join('\n'), 'utf8');
+
+  // Com domínio próprio, o endereço provisório *.workers.dev é desligado (sem conteúdo duplicado no Google).
+  const wranglerFile = path.resolve(root, '..', 'wrangler.jsonc');
+  if (fs.existsSync(wranglerFile)) {
+    const wrangler = fs.readFileSync(wranglerFile, 'utf8');
+    fs.writeFileSync(wranglerFile, wrangler.replace(/"workers_dev":\s*(true|false)/, `"workers_dev": ${provisional}`), 'utf8');
+  }
 
   console.log(`Site atualizado: ${site}/`);
   console.log(`Versão ${KINNOR.versao} (${date}) · ${pages.length} páginas · arquivos v=${assetVersion}`);

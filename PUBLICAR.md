@@ -1,25 +1,61 @@
 # Publicar o site Kinnor Live
 
-Publique **somente o conteúdo da pasta `public/`**. As pastas `_material/` e `ferramentas/` e os arquivos deste diretório são de trabalho local.
+## Como o site está hospedado
 
-## Antes de enviar
+| Parte | Onde fica |
+|---|---|
+| Páginas do site | **Cloudflare** (Workers com arquivos estáticos), projeto `kinnor-live` — configuração em `wrangler.jsonc` |
+| Instaladores (.exe, .apk, .ipa) | **GitHub Releases** do repositório público `PierreSaloia/kinnor-live-site`. Os botões do site baixam direto, sem abrir o GitHub. (A Cloudflare não aceita arquivos acima de 25 MB.) |
+| Código do site | GitHub, repositório `PierreSaloia/kinnor-live-site` |
 
-Abra o site por `VER-SITE.bat`, confira as páginas e execute `node ferramentas/verificar-links.js`. Preencha no `public/assets/js/config.js` os links e contatos que já estiverem disponíveis. Os botões das lojas e de doação permanecem informativos enquanto os campos estiverem vazios.
+## Publicar
 
-## Tamanho dos instaladores
+Dois cliques em **`PUBLICAR.bat`**. Ele:
+1. sincroniza as páginas com o `config.js` e confere todos os links;
+2. guarda as mudanças no GitHub;
+3. se a versão é nova, cria a Release com os instaladores da pasta `instaladores\`;
+4. publica a pasta `public\` na Cloudflare.
 
-O instalador Windows tem cerca de 175 MB; o APK tem cerca de 38 MB. Vários serviços gratuitos limitam o tamanho de cada arquivo. Cloudflare Pages aceita no máximo 25 MB por arquivo e GitHub Pages, 100 MB. Portanto, esses arquivos não cabem nessas opções como parte do site.
+Precisa, neste computador: Git, GitHub CLI (`gh`, já logado) e o wrangler da Cloudflare (já logado).
+Em outro computador: `gh auth login` e `npx wrangler@4 login`.
 
-**Recomendação:** publique o `.exe` e o `.apk` como anexos de uma Release no GitHub, ou em outro serviço que aceite arquivos grandes e forneça links diretos. Cole cada link completo em `windows.arquivo` e `android.apk` no `config.js`. Teste os dois downloads no site publicado. Hospedagem comum que aceite arquivos grandes também pode servir os instaladores dentro de `public/downloads/`.
+## Ligar o domínio próprio (ex.: kinnorlive.com.br)
 
-## Opções de publicação
+1. Registre o domínio (Registro.br para `.com.br`) e adicione-o à Cloudflare (dash.cloudflare.com › Adicionar domínio).
+   No Registro.br, troque os servidores DNS pelos que a Cloudflare mostrar.
+2. Na Cloudflare: **Workers e Pages › kinnor-live › Configurações › Domínios e rotas › Adicionar › Domínio personalizado**:
+   `www.kinnorlive.com.br` (e também `kinnorlive.com.br`).
+3. Faça o endereço sem `www` levar ao com `www` (ou o contrário): **Regras › Regras de redirecionamento** › redirecionamento
+   301 de `kinnorlive.com.br/*` para `https://www.kinnorlive.com.br/${1}` (modelo “Redirect from root to www”).
+4. No `config.js`, troque `site.url` para `https://www.kinnorlive.com.br` e rode `PUBLICAR.bat`.
+   Isso atualiza canonical, sitemap, dados do Google e **desliga o endereço provisório** `*.workers.dev`
+   (o Google passa a ver só o domínio oficial).
 
-- **Netlify:** arraste a pasta `public/` para o painel de publicação. Para arquivos acima do limite da conta, hospede os instaladores separadamente. O arquivo `_headers` leva cabeçalhos de cache e download.
-- **Cloudflare Pages:** crie um projeto de páginas estáticas e envie o conteúdo de `public/`. Hospede ambos os instaladores fora do Pages, pois ultrapassam o limite por arquivo. Use os links externos no `config.js`.
-- **Hospedagem comum:** envie todo o conteúdo de `public/` para a pasta pública do servidor por FTP. Confira se o plano permite os arquivos grandes. O `.htaccess` configura tipos de arquivo, download e página 404 em servidores Apache.
+## Google Search Console (aparecer no Google)
 
-## Domínio
+1. Entre em https://search.google.com/search-console e adicione a propriedade.
+   - Com domínio próprio na Cloudflare, prefira **Domínio** (verificação por DNS: a Cloudflare adiciona o registro TXT).
+   - Ou **Prefixo do URL** com a opção **Tag HTML**: copie só o código do `content="..."` para
+     `google.searchConsole` no `config.js` e rode `PUBLICAR.bat`.
+2. Em **Sitemaps**, envie `sitemap.xml`.
+3. Em **Inspeção de URL**, peça a indexação da página inicial e das páginas de solução.
+4. Bing: https://www.bing.com/webmasters › “Importar do Google Search Console”.
 
-No painel da hospedagem, adicione o domínio e siga as instruções de DNS do provedor. Depois, troque `site.url` no `config.js` pelo endereço definitivo, com `https://` e sem barra final. Execute `CONFIGURAR-DOMINIO.bat` para atualizar as tags de SEO estáticas, o JSON-LD, `robots.txt` e `sitemap.xml`.
+## Google Analytics 4
 
-Confirme que o site abre em HTTPS, que os downloads iniciam e que `privacidade.html` e `suporte.html` têm os endereços usados no cadastro das lojas.
+1. Em https://analytics.google.com crie uma propriedade e um fluxo **Web** com o endereço do site.
+2. Copie o **ID da métricas** (`G-XXXXXXX`) para `google.analytics` no `config.js` e rode `PUBLICAR.bat`.
+3. O site mostra um aviso de cookies (LGPD): o Analytics só carrega se o visitante aceitar.
+   A política de privacidade já explica isso. Downloads e cliques em “Ofertar” viram eventos
+   (`file_download`, `begin_checkout`).
+
+## O que já está feito para o SEO
+
+- Endereços amigáveis (`/camera-para-igreja`), redirecionamentos 301 (`public\_redirects`) e 404 própria.
+- Título, descrição, canonical, Open Graph e Twitter Card únicos por página.
+- Dados estruturados: Organization, WebSite, SoftwareApplication, MobileApplication, BreadcrumbList,
+  FAQPage (gerado das perguntas de cada página) e HowTo (no guia).
+- `sitemap.xml` com data de atualização, `robots.txt`, `lang="pt-BR"`, conteúdo 100% no HTML (sem depender de JavaScript).
+- Imagens WebP com tamanhos por tela, carregamento sob demanda, fontes locais, cache longo com versão nos arquivos (`public\_headers`).
+- Páginas de solução para as buscas das igrejas: câmera para igreja grátis, stories com o som da mesa,
+  transmissão ao vivo, retorno no celular e o guia “como transmitir o culto com celular”.

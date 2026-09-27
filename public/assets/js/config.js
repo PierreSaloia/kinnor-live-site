@@ -4,7 +4,7 @@
 // Deixe vazio ('') o que ainda não existe: o site mostra uma mensagem adequada.
 export const KINNOR = {
   // Endereço público do site, sem barra no final.
-  site: { url: 'https://kinnor-live.pages.dev' },
+  site: { url: 'https://kinnor-live.servidor-doacoes.workers.dev' },
 
   versao: '1.1.2',
   dataVersao: '2026-09-27',

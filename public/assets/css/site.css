@@ -598,7 +598,9 @@ strong {
   height: var(--h, 35%);
   border-radius: 3px;
   background: var(--green);
+  transform-origin: bottom;
   animation: meter 1.1s ease-in-out infinite alternate;
+  will-change: transform;
 }
 .meter i:nth-child(3n) {
   --h: 90%;
@@ -616,7 +618,7 @@ strong {
 }
 @keyframes meter {
   to {
-    height: 15%;
+    transform: scaleY(0.4);
   }
 }
 .hero-bottom {
@@ -841,56 +843,19 @@ strong {
   animation: flow-right 2.6s linear infinite 0.65s;
 }
 @keyframes flow-down {
-  0% {
-    top: 0;
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    top: 31px;
-    opacity: 0;
-  }
+  0% { transform: translateY(0); opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { transform: translateY(31px); opacity: 0; }
 }
 @keyframes flow-left {
-  0% {
-    top: 0;
-    right: -3px;
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    top: 39px;
-    right: 25px;
-    opacity: 0;
-  }
+  0% { transform: translate(0, 0); opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { transform: translate(-28px, 39px); opacity: 0; }
 }
 @keyframes flow-right {
-  0% {
-    top: 0;
-    left: -3px;
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    top: 39px;
-    left: 25px;
-    opacity: 0;
-  }
+  0% { transform: translate(0, 0); opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { transform: translate(28px, 39px); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .flow-link-vertical i,
@@ -3120,4 +3085,10 @@ a.pillar:hover .card-foot .icon {
 .donation-page {
   width: 100%;
   margin-top: 18px;
+}
+
+/* DESEMPENHO: seções fora da tela só são desenhadas quando o visitante chega perto */
+main > .section:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
 }

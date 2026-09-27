@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kinnor-live.pages.dev/sitemap.xml
+Sitemap: https://kinnor-live.servidor-doacoes.workers.dev/sitemap.xml
