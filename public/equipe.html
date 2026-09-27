@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script>
+      document.documentElement.classList.add("js");
+      addEventListener("load", () => {
+        if (!document.documentElement.classList.contains("js-ready"))
+          document.documentElement.classList.remove("js");
+      });
+    </script>
+    <!-- PÁGINA DE TESTES DA EQUIPE: fora do Google (noindex) e fora do sitemap. Pode ser apagada depois. -->
+    <title>Instalação da equipe (testes) | Kinnor Live</title>
+    <meta name="description" content="Arquivos e passo a passo para instalar o Kinnor Live no computador da igreja, nos celulares Android e nos iPhones da equipe." />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#050b17" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Kinnor Live" />
+    <meta property="og:title" content="Instalação da equipe | Kinnor Live" />
+    <meta property="og:image" content="https://kinnor-live.pages.dev/assets/img/og-kinnor-live.png" data-og-image />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preload" href="assets/fonts/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/outfit-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/site.css?v=a8723387d9" data-asset />
+    <script type="module" src="assets/js/main.js?v=a8723387d9" data-asset></script>
+  </head>
+  <body>
+    <!-- CABEÇALHO -->
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="Kinnor Live — página inicial">
+          <img src="assets/img/logo.webp" width="42" height="42" alt="" />
+          <span><strong>Kinnor Live</strong><small>SUA IGREJA AO VIVO</small></span>
+        </a>
+        <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal" data-menu-button>
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#menu"></use></svg>
+        </button>
+        <nav id="menu-principal" class="nav" aria-label="Navegação principal" data-nav>
+          <a href="camera-para-igreja">Câmeras</a>
+          <a href="stories-com-audio-da-mesa">Stories</a>
+          <a href="transmissao-ao-vivo-para-igrejas">Ao vivo</a>
+          <a href="retorno-de-audio-no-celular">Retorno</a>
+          <a href="como-transmitir-culto-com-celular">Guia</a>
+          <a href="suporte">Suporte</a>
+          <a class="button button-sm" href="download">
+            Baixar grátis
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- /CABEÇALHO -->
+
+    <main id="conteudo">
+      <section class="landing-hero">
+        <div class="container">
+          <p class="eyebrow"><span class="live-dot"></span>PÁGINA DE TESTES DA EQUIPE</p>
+          <h1>Instalação da equipe, <em>na ordem certa.</em></h1>
+          <p class="lead">
+            Tudo o que é preciso para montar o Kinnor Live na igreja: o programa
+            do computador, o app dos celulares Android e o app dos iPhones, com o
+            passo a passo. Abra esta página no notebook da igreja e siga as partes
+            1 a 4, nesta ordem.
+          </p>
+          <div class="callout">
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#shield"></use></svg>
+            <p>Esta página é só para testes: ela não aparece no Google nem no menu do site. Versão dos arquivos: <strong><span data-version>1.1.2</span></strong>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARQUIVOS -->
+      <section class="section" id="arquivos">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">ARQUIVOS</p>
+            <h2>Os três instaladores <span class="accent">do Kinnor Live.</span></h2>
+            <p>Cada botão baixa o arquivo direto. Cada um é instalado num aparelho diferente, como explicado abaixo.</p>
+          </div>
+          <div class="use-grid">
+            <article class="card install-file">
+              <div class="feature-icon blue"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#monitor"></use></svg></div>
+              <h3>Computador (Windows)</h3>
+              <p>Notebook ou PC da mídia · <span data-win-requirements>Windows 10 ou 11 (64 bits)</span> · <span data-win-size>175 MB</span></p>
+              <a class="button full" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Setup-1.1.2.exe" data-win-download>
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+                Baixar para Windows (.exe)
+              </a>
+            </article>
+            <article class="card install-file">
+              <div class="feature-icon cyan"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#phone"></use></svg></div>
+              <h3>Celulares Android</h3>
+              <p>Abra esta página no próprio celular · <span data-apk-requirements>Android 10 ou superior</span> · <span data-apk-size>38 MB</span></p>
+              <a class="button full" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Android-1.1.2.apk" data-apk-download>
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+                Baixar para Android (.apk)
+              </a>
+            </article>
+            <article class="card install-file">
+              <div class="feature-icon amber"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#apple"></use></svg></div>
+              <h3>iPhones (teste)</h3>
+              <p>Instalado pelo AltStore · <span data-ipa-requirements>iOS 16 ou mais novo</span> · <span data-ipa-size>7 MB</span></p>
+              <a class="button full" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-iPhone-1.1.2-sem-assinatura.ipa" data-ipa-download>
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+                Baixar para iPhone (.ipa)
+              </a>
+            </article>
+          </div>
+
+          <h3 class="subhead">Programas de apoio (só para os iPhones)</h3>
+          <p class="muted">Instale no notebook da igreja apenas se for usar iPhones. São programas gratuitos, baixados do site oficial de cada um.</p>
+          <div class="use-grid">
+            <a class="card tool-link" href="https://www.apple.com/itunes/download/win64" target="_blank" rel="noopener">
+              <strong>1 · iTunes (Apple)</strong>
+              <span>Versão do site da Apple, 64 bits. Não use a da Microsoft Store.</span>
+            </a>
+            <a class="card tool-link" href="https://updates.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe" target="_blank" rel="noopener">
+              <strong>2 · iCloud para Windows (Apple)</strong>
+              <span>Versão do site da Apple. Não precisa entrar com conta.</span>
+            </a>
+            <a class="card tool-link" href="https://cdn.altstore.io/file/altstore/altinstaller.zip" target="_blank" rel="noopener">
+              <strong>3 · AltServer (AltStore)</strong>
+              <span>Leva o AltStore para o iPhone pelo cabo. Site: altstore.io</span>
+            </a>
+          </div>
+          <p class="muted small-note">Alternativa, se o AltStore não der certo: <a href="https://sideloadly.io/SideloadlySetup64.exe" target="_blank" rel="noopener">Sideloadly para Windows</a> (sideloadly.io), que instala o .ipa direto do computador.</p>
+        </div>
+      </section>
+
+      <!-- PARTE 1 -->
+      <section class="section how-section" id="parte-1">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">PARTE 1 · NO NOTEBOOK DA IGREJA</p>
+            <h2>Instalar e preparar <span class="accent">o computador.</span></h2>
+          </div>
+          <ol class="guide-steps prose">
+            <li>
+              <h3>Baixe e instale o programa</h3>
+              <p>Clique em <strong>Baixar para Windows</strong>, acima, e abra o arquivo. Se aparecer “O Windows protegeu o computador”, clique em <strong>Mais informações</strong> › <strong>Executar assim mesmo</strong>. Se o Firewall perguntar, permita em redes privadas.</p>
+            </li>
+            <li>
+              <h3>Abra o Kinnor Live</h3>
+              <p>Na primeira abertura ele cria sozinho as webcams “Kinnor Live Câmera 1 a 4”. Deixe o notebook no <strong>Wi-Fi da igreja</strong> — o mesmo que os celulares vão usar.</p>
+            </li>
+            <li>
+              <h3>Ligue a mesa de som</h3>
+              <p>Cabo P2 da saída da mesa (rec out, auxiliar ou fone) na entrada de áudio do notebook, ou a mesa/interface USB. No programa: <strong>Áudio</strong> › <strong>Adicionar fonte</strong> › escolha a entrada. O medidor deve mexer no verde.</p>
+            </li>
+            <li>
+              <h3>Envie o som para os celulares</h3>
+              <p>Clique em <strong>Enviar para os celulares</strong>. Deixe a tela <strong>Início</strong> aberta: o QR Code para conectar os celulares aparece nela.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- PARTE 2 -->
+      <section class="section" id="parte-2">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">PARTE 2 · EM CADA CELULAR ANDROID</p>
+            <h2>Instalar o app <span class="accent">nos Androids.</span></h2>
+          </div>
+          <ol class="guide-steps prose">
+            <li>
+              <h3>Abra esta página no celular</h3>
+              <p>No navegador do celular, digite o endereço desta página e toque em <strong>Baixar para Android</strong>. Outra opção: escaneie o QR Code da tela do programa, que também oferece o app.</p>
+            </li>
+            <li>
+              <h3>Instale o arquivo</h3>
+              <p>Abra o arquivo baixado. Se o Android pedir, permita <strong>instalar apps desta fonte</strong>. Se o Play Protect avisar, toque em <strong>Mais detalhes</strong> › <strong>Instalar mesmo assim</strong>.</p>
+            </li>
+            <li>
+              <h3>Conecte ao computador</h3>
+              <p>Com o celular no mesmo Wi-Fi do notebook, abra o Kinnor Live, permita câmera e microfone e aponte para o QR Code da tela do programa. No topo do app aparece “Áudio da mesa · Conectado”.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- PARTE 3 -->
+      <section class="section how-section" id="parte-3">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">PARTE 3 · IPHONES (PELO ALTSTORE)</p>
+            <h2>Instalar o app <span class="accent">nos iPhones.</span></h2>
+            <p>Enquanto o app não está na App Store, ele é instalado de graça pelo AltStore. Cada pessoa usa o próprio Apple ID. Com Apple ID gratuito, o app vale 7 dias e se renova sozinho no Wi-Fi da igreja com o notebook ligado.</p>
+          </div>
+          <ol class="guide-steps prose">
+            <li>
+              <h3>No notebook (uma vez só)</h3>
+              <p>Instale o <strong>iTunes</strong> e depois o <strong>iCloud</strong> pelos links “Programas de apoio” acima (reinicie se pedir). Extraia o <strong>altinstaller.zip</strong> e rode o Setup. Abra o <strong>AltServer</strong> como administrador; um ícone de losango aparece perto do relógio. Clique nele e marque <strong>Launch at Login</strong>.</p>
+            </li>
+            <li>
+              <h3>Ligue o iPhone no notebook</h3>
+              <p>Pelo cabo, desbloqueie e toque em <strong>Confiar</strong>. No iTunes, clique no ícone do iPhone › <strong>Resumo</strong> › marque <strong>Sincronizar com este iPhone via Wi-Fi</strong> › <strong>Aplicar</strong>.</p>
+            </li>
+            <li>
+              <h3>Instale o AltStore no iPhone</h3>
+              <p>Clique no losango do AltServer › <strong>Install AltStore</strong> › escolha o iPhone e digite o Apple ID e a senha <strong>da pessoa dona do iPhone</strong> (vão só para a Apple). Espere “Installation Succeeded”.</p>
+            </li>
+            <li>
+              <h3>Libere o AltStore no iPhone</h3>
+              <p>Ajustes › Geral › <strong>VPN e Gerenciamento de Dispositivos</strong> › toque no Apple ID › <strong>Confiar</strong>. Depois: Ajustes › Privacidade e Segurança › <strong>Modo de Desenvolvedor</strong> › ligar (o iPhone reinicia; toque em Ativar).</p>
+            </li>
+            <li>
+              <h3>Instale o Kinnor Live</h3>
+              <p>No Safari do iPhone, abra esta página e toque em <strong>Baixar para iPhone</strong> (o arquivo vai para o app Arquivos). Abra o <strong>AltStore</strong> › <strong>Meus Apps</strong> › <strong>+</strong> › escolha o arquivo do Kinnor Live. O iPhone precisa estar no mesmo Wi-Fi do notebook, com o AltServer aberto.</p>
+            </li>
+            <li>
+              <h3>Primeira abertura</h3>
+              <p>Permita câmera, microfone e <strong>rede local</strong>. Conecte pelo QR Code da tela do programa, igual ao Android.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- PARTE 4 -->
+      <section class="section" id="parte-4">
+        <div class="container split">
+          <div class="prose">
+            <p class="eyebrow">PARTE 4 · TESTES</p>
+            <h2>O que testar na igreja</h2>
+            <ol>
+              <li><strong>Retorno:</strong> no app, toque em “Ouvir a mesa” e confira o som no fone.</li>
+              <li><strong>Stories com a mesa:</strong> no modo Gravar com a mesa, grave um trecho, confira se a boca bate com o som e poste no Instagram.</li>
+              <li><strong>Webcam:</strong> no modo Webcam, veja se o celular aparece como “Kinnor Live Câmera N” no programa.</li>
+              <li><strong>Transmissão:</strong> monte uma cena com as câmeras e faça uma live de teste privada no YouTube.</li>
+              <li><strong>Tela bloqueada (iPhone):</strong> ouvindo a mesa, bloqueie a tela por alguns minutos — o som deve continuar.</li>
+            </ol>
+          </div>
+          <div class="prose">
+            <h2>Anote e mande</h2>
+            <p>Para cada problema, anote o modelo do celular, o que estava fazendo e o que aconteceu. Se possível, tire um print ou grave a tela.</p>
+            <p>O passo a passo completo da transmissão está no <a href="como-transmitir-culto-com-celular">guia de como transmitir o culto</a>, e as soluções comuns no <a href="suporte">suporte</a>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="./" aria-label="Kinnor Live — página inicial">
+            <img src="assets/img/logo.webp" width="42" height="42" alt="" loading="lazy" />
+            <span><strong>Kinnor Live</strong><small>SUA IGREJA AO VIVO</small></span>
+          </a>
+          <p class="footer-pitch">Programa gratuito para igrejas: câmeras sem fio com celulares, som da mesa nos fones e nos stories, e o culto ao vivo em todas as redes.</p>
+          <div class="footer-ministry">
+            <img src="assets/img/ministerio.webp" width="48" height="48" loading="lazy" alt="Logo do Ministério AD Palmares" />
+            <p>Feito com fé no Ministério AD Palmares.</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h2>Soluções</h2>
+          <a href="camera-para-igreja">Câmera para igreja grátis</a>
+          <a href="stories-com-audio-da-mesa">Stories com o som da mesa</a>
+          <a href="transmissao-ao-vivo-para-igrejas">Transmissão ao vivo</a>
+          <a href="retorno-de-audio-no-celular">Retorno de áudio no celular</a>
+          <a href="como-transmitir-culto-com-celular">Como transmitir o culto</a>
+        </div>
+        <div class="footer-links">
+          <h2>Kinnor Live</h2>
+          <a href="download">Downloads</a>
+          <a href="suporte">Suporte</a>
+          <a href="./#sobre">Nossa história</a>
+          <a href="./#apoie">Apoie o projeto</a>
+          <a href="privacidade">Privacidade</a>
+          <a href="termos">Termos de uso</a>
+          <button type="button" class="footer-cookie" data-cookie-settings hidden>Preferências de cookies</button>
+        </div>
+        <div class="footer-downloads">
+          <h2>Baixe grátis</h2>
+          <a class="footer-win-link" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Setup-1.1.2.exe" data-win-download>
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+            Kinnor Live para Windows
+          </a>
+          <a class="store-badge" href="download#android" data-store="android" aria-label="Disponível no Google Play">
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#play"></use></svg>
+            <span><small>DISPONÍVEL NO</small><strong>Google Play</strong></span>
+          </a>
+          <a class="store-badge" href="download#iphone" data-store="ios" aria-label="Baixar na App Store">
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#apple"></use></svg>
+            <span><small>Baixar na</small><strong>App Store</strong></span>
+          </a>
+          <h2 class="footer-contact-title">Contato</h2>
+          <div class="footer-contact" data-contact data-contact-context="footer">Os canais de contato serão publicados em breve.</div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year>2026</span> Kinnor Live · Feito no Brasil</span>
+        <span>Versão <span data-version>1.1.2</span></span>
+      </div>
+    </footer>
+
+    <div class="download-toast" role="status" aria-live="polite" data-download-toast hidden>
+      <span>Seu download começou.</span>
+      <a href="download#instalar">Ver como instalar</a>
+      <button type="button" aria-label="Fechar aviso" data-toast-close>×</button>
+    </div>
+
+    <div class="cookie-banner" role="region" aria-label="Aviso de cookies" data-cookie-banner hidden>
+      <p>Usamos cookies do Google Analytics para entender, de forma agregada, como o site é usado. Você escolhe. <a href="privacidade#cookies">Saiba mais</a>.</p>
+      <div>
+        <button type="button" class="button button-sm button-ghost" data-cookie-choice="recusado">Recusar</button>
+        <button type="button" class="button button-sm" data-cookie-choice="aceito">Aceitar</button>
+      </div>
+    </div>
+
+    <dialog class="store-dialog" data-store-dialog aria-labelledby="dialog-title" aria-describedby="dialog-text">
+      <div class="dialog-inner">
+        <button type="button" class="dialog-close" aria-label="Fechar" data-dialog-close>×</button>
+        <div class="dialog-icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg></div>
+        <h2 id="dialog-title" data-dialog-title>Em breve</h2>
+        <p id="dialog-text" data-dialog-text></p>
+        <a class="button" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Android-1.1.2.apk" data-apk-download data-dialog-apk>
+          Instalar o app Android direto
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+        </a>
+        <button type="button" class="text-button" data-dialog-close>Entendi</button>
+      </div>
+    </dialog>
+    <!-- /RODAPÉ -->
+  </body>
+</html>

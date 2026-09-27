@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script>
+      document.documentElement.classList.add("js");
+      addEventListener("load", () => {
+        if (!document.documentElement.classList.contains("js-ready"))
+          document.documentElement.classList.remove("js");
+      });
+    </script>
+    <title>Como transmitir o culto com celular: guia passo a passo</title>
+    <meta name="description" content="Guia gratuito para transmitir o culto ao vivo usando os celulares da equipe como câmeras e o som da mesa. Do cabo da mesa ao botão ao vivo, em 9 passos." />
+    <link rel="canonical" href="https://kinnor-live.pages.dev/como-transmitir-culto-com-celular" data-canonical />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#050b17" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Kinnor Live" />
+    <meta property="og:title" content="Como transmitir o culto com celular: guia passo a passo" />
+    <meta property="og:description" content="Monte a transmissão da igreja com um computador, os celulares da equipe e o Wi-Fi — sem comprar câmeras." />
+    <meta property="og:url" content="https://kinnor-live.pages.dev/como-transmitir-culto-com-celular" data-og-url />
+    <meta property="og:image" content="https://kinnor-live.pages.dev/assets/img/og-kinnor-live.png" data-og-image />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kinnor Live: sua igreja ao vivo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Como transmitir o culto com celular: guia passo a passo" />
+    <meta name="twitter:description" content="Monte a transmissão da igreja com um computador, os celulares da equipe e o Wi-Fi." />
+    <meta name="twitter:image" content="https://kinnor-live.pages.dev/assets/img/og-kinnor-live.png" data-og-image />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preload" href="assets/fonts/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/outfit-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/site.css?v=a8723387d9" data-asset />
+    <script type="module" src="assets/js/main.js?v=a8723387d9" data-asset></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://kinnor-live.pages.dev/" },
+              { "@type": "ListItem", "position": 2, "name": "Como transmitir o culto com celular", "item": "https://kinnor-live.pages.dev/como-transmitir-culto-com-celular" }
+            ]
+          },
+          {
+            "@type": "HowTo",
+            "name": "Como transmitir o culto ao vivo usando celulares como câmeras",
+            "description": "Passo a passo para transmitir o culto com os celulares da equipe como câmeras sem fio, o som da mesa e o Kinnor Live, programa gratuito para Windows.",
+            "inLanguage": "pt-BR",
+            "totalTime": "PT1H",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "BRL", "value": "0" },
+            "supply": [
+              { "@type": "HowToSupply", "name": "Cabo P2 ou mesa/interface de áudio USB" }
+            ],
+            "tool": [
+              { "@type": "HowToTool", "name": "Computador com Windows 10 ou 11 (64 bits)" },
+              { "@type": "HowToTool", "name": "Celulares Android 10 ou superior" },
+              { "@type": "HowToTool", "name": "Rede Wi-Fi da igreja" },
+              { "@type": "HowToTool", "name": "Kinnor Live (gratuito)" }
+            ],
+            "step": [
+              { "@type": "HowToStep", "position": 1, "name": "Instale o Kinnor Live no computador", "url": "https://kinnor-live.pages.dev/como-transmitir-culto-com-celular#passo-1", "text": "Baixe grátis o Kinnor Live e instale no computador da mídia com Windows 10 ou 11." },
+              { "@type": "HowToStep", "position": 2, "name": "Ligue a mesa de som ao computador", "url": "https://kinnor-live.pages.dev/como-transmitir-culto-com-celular#passo-2", "text": "Use um cabo P2 da saída da mesa até a entrada de áudio do computador, ou conecte uma mesa ou interface USB, e adicione a fonte no mixer." },
+              { "@type": "HowToStep", "position": 3, "name": "Envie o som para os celulares", "url": "https://kinnor-live.pages.dev/como-transmitir-culto-com-celular#passo-3", "text": "No mixer, clique em Enviar para os celulares para levar o som da mesa à equipe pelo Wi-Fi." },
+              { "@type": "HowToStep", "position": 4, "name": "Conecte os celulares da equipe", "url": "https://kinnor-live.pages.dev/como-transmitir-culto-com-celular#passo-4", "text": "Instale o app, coloque os celulares no mesmo Wi-Fi do computador e escaneie o QR Code da tela." },
+              { "@type": "HowToStep", "position": 5, "name": "Transforme os celulares em câmeras", "url": "https://kinnor-live.pages.dev/como-transmitir-culto-com-celular#passo-5", "text": "No app, escolha o modo Webcam. Cada celular vira uma câmera do Windows, de Câmera 1 a Câmera 4." },
+              { "@type": "HowToStep", "position": 6, "name": "Monte as cenas", "url": "https://kinnor-live.pages.dev/como-transmitir-culto-com-celular#passo-6", "text": "Na tela Transmissão, crie as cenas do culto e posicione as câmeras na pré-visualização." },
+              { "@type": "HowToStep", "position": 7, "name": "Adicione os destinos", "url": "https://kinnor-live.pages.dev/como-transmitir-culto-com-celular#passo-7", "text": "Em Destinos, adicione YouTube, Facebook, Instagram ou outras plataformas com a chave de transmissão de cada uma." },
+              { "@type": "HowToStep", "position": 8, "name": "Faça um teste", "url": "https://kinnor-live.pages.dev/como-transmitir-culto-com-celular#passo-8", "text": "Faça uma transmissão de teste privada antes do culto para conferir som e imagem." },
+              { "@type": "HowToStep", "position": 9, "name": "Entre ao vivo", "url": "https://kinnor-live.pages.dev/como-transmitir-culto-com-celular#passo-9", "text": "Clique em Iniciar transmissão e troque as cenas durante o culto." }
+            ]
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json" data-faq-schema>
+      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Dá para transmitir o culto só com celular?","acceptedAnswer":{"@type":"Answer","text":"Com o Kinnor Live, os celulares são as câmeras e o computador com Windows faz a transmissão. Assim você tem várias câmeras, o som da mesa e cenas, sem comprar equipamento."}},{"@type":"Question","name":"Qual programa usar para transmitir o culto de graça?","acceptedAnswer":{"@type":"Answer","text":"O Kinnor Live é gratuito, feito para igrejas, e junta câmeras sem fio com celulares, som da mesa e transmissão para várias redes ao mesmo tempo, sem marca d'água."}},{"@type":"Question","name":"Como levar o som da mesa para a transmissão?","acceptedAnswer":{"@type":"Answer","text":"Ligue a saída da mesa na entrada de áudio do computador com um cabo P2, ou use uma mesa/interface USB, e adicione essa entrada no mixer do Kinnor Live."}},{"@type":"Question","name":"Quantas câmeras posso usar?","acceptedAnswer":{"@type":"Answer","text":"Até quatro celulares como câmeras ao mesmo tempo."}},{"@type":"Question","name":"Precisa de internet boa?","acceptedAnswer":{"@type":"Answer","text":"Para a live, sim: a transmissão usa a internet de envio (upload) da igreja. As câmeras e o som funcionam na rede Wi-Fi local, sem gastar internet."}}]}
+    </script>
+  </head>
+  <body>
+    <!-- CABEÇALHO -->
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="Kinnor Live — página inicial">
+          <img src="assets/img/logo.webp" width="42" height="42" alt="" />
+          <span><strong>Kinnor Live</strong><small>SUA IGREJA AO VIVO</small></span>
+        </a>
+        <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal" data-menu-button>
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#menu"></use></svg>
+        </button>
+        <nav id="menu-principal" class="nav" aria-label="Navegação principal" data-nav>
+          <a href="camera-para-igreja">Câmeras</a>
+          <a href="stories-com-audio-da-mesa">Stories</a>
+          <a href="transmissao-ao-vivo-para-igrejas">Ao vivo</a>
+          <a href="retorno-de-audio-no-celular">Retorno</a>
+          <a href="como-transmitir-culto-com-celular">Guia</a>
+          <a href="suporte">Suporte</a>
+          <a class="button button-sm" href="download">
+            Baixar grátis
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- /CABEÇALHO -->
+
+    <main id="conteudo">
+      <section class="landing-hero">
+        <div class="container landing-grid">
+          <div>
+            <ol class="breadcrumb">
+              <li><a href="./">Início</a></li>
+              <li aria-current="page">Guia: transmitir o culto com celular</li>
+            </ol>
+            <p class="eyebrow">GUIA PASSO A PASSO</p>
+            <h1>Como transmitir o culto <em>usando celulares</em>, do zero.</h1>
+            <p class="lead">
+              Neste guia você monta a transmissão da igreja com um computador com
+              Windows, os celulares da equipe e o Wi-Fi — sem comprar câmeras e
+              sem gastar nada com programas.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-lg" href="#passo-1">
+                Começar o guia
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg>
+              </a>
+              <a class="button button-ghost button-lg" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Setup-1.1.2.exe" data-smart-download>
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+                <span data-smart-label>Baixar grátis para Windows</span>
+              </a>
+            </div>
+            <ul class="trust-line">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>9 passos</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Custo zero em programas</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Para voluntários</li>
+            </ul>
+          </div>
+          <div class="landing-visual">
+            <div class="window-frame">
+              <div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>Kinnor Live</span><span class="window-line"></span></div>
+              <img src="assets/img/home-1200.webp" srcset="assets/img/home-800.webp 800w, assets/img/home-1200.webp 1200w, assets/img/home-1672.webp 1672w" sizes="(max-width: 850px) 92vw, 46vw" width="1200" height="676" alt="Central de Transmissão do Kinnor Live com áudio, câmeras e transmissão ao vivo" fetchpriority="high" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">ANTES DE COMEÇAR</p>
+            <h2>O que você <span class="accent">vai precisar.</span></h2>
+          </div>
+          <div class="need-grid">
+            <div class="card reveal">
+              <div class="feature-icon blue"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#monitor"></use></svg></div>
+              <strong>Um computador</strong>
+              <span>Windows 10 ou 11 (64 bits), perto da mesa de som.</span>
+            </div>
+            <div class="card reveal">
+              <div class="feature-icon cyan"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#phone"></use></svg></div>
+              <strong>Os celulares da equipe</strong>
+              <span>Android 10 ou superior. Um para cada câmera, até quatro.</span>
+            </div>
+            <div class="card reveal">
+              <div class="feature-icon amber"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#audio"></use></svg></div>
+              <strong>O som da mesa</strong>
+              <span>Um cabo P2 da saída da mesa, ou uma mesa/interface USB.</span>
+            </div>
+            <div class="card reveal">
+              <div class="feature-icon red"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#wifi"></use></svg></div>
+              <strong>Wi-Fi e internet</strong>
+              <span>Wi-Fi para a equipe e internet de envio para a live.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section how-section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">PASSO A PASSO</p>
+            <h2>Monte a transmissão <span class="accent">da sua igreja.</span></h2>
+          </div>
+          <ol class="guide-steps prose">
+            <li id="passo-1">
+              <h3>Instale o Kinnor Live no computador</h3>
+              <p>
+                Baixe o instalador na <a href="download">página de download</a> e
+                abra o arquivo. Se o Windows mostrar “O Windows protegeu o
+                computador”, clique em <strong>Mais informações</strong> e depois em
+                <strong>Executar assim mesmo</strong>. O instalador já libera o
+                programa no Firewall e cria as webcams “Kinnor Live Câmera 1 a 4”
+                na primeira abertura.
+              </p>
+            </li>
+            <li id="passo-2">
+              <h3>Ligue a mesa de som ao computador</h3>
+              <p>
+                Use um cabo P2 da saída da mesa — <strong>rec out</strong>, auxiliar
+                ou fone — até a entrada de áudio do computador. Se a mesa ou a
+                interface for USB, basta conectar. No Kinnor Live, abra
+                <strong>Áudio</strong>, clique em <strong>Adicionar fonte</strong> e
+                escolha essa entrada.
+              </p>
+              <p>
+                Confira o medidor: ele deve ficar no verde e tocar o amarelo nos
+                momentos mais fortes. Vermelho significa distorção — baixe o volume
+                na mesa ou no mixer.
+              </p>
+            </li>
+            <li id="passo-3">
+              <h3>Envie o som para os celulares</h3>
+              <p>
+                Clique em <strong>Enviar para os celulares</strong>. A partir daí o
+                som da mesa chega aos celulares da equipe pelo Wi-Fi — para o
+                retorno no fone e para os stories gravados com o som da mesa.
+                “Equilibrado” é o ajuste recomendado para a maioria das igrejas.
+              </p>
+            </li>
+            <li id="passo-4">
+              <h3>Conecte os celulares da equipe</h3>
+              <p>
+                Cada voluntário instala o app Kinnor Live (veja as opções na
+                <a href="download#android">página de download</a>), entra no mesmo
+                Wi-Fi do computador e aponta a câmera para o <strong>QR Code</strong>
+                da tela Início ou Rede. Pronto: o celular aparece no painel.
+              </p>
+            </li>
+            <li id="passo-5">
+              <h3>Transforme os celulares em câmeras</h3>
+              <p>
+                No app, deslize até o modo <strong>WEBCAM</strong>. Cada celular
+                vira uma câmera do Windows, de Câmera 1 a Câmera 4. Coloque-os em
+                suportes nas posições do culto — púlpito, louvor, plano geral — e
+                ajuste zoom, lente e qualidade pela tela
+                <strong>Dispositivos</strong>. Veja ideias em
+                <a href="camera-para-igreja">câmera para igreja</a>.
+              </p>
+            </li>
+            <li id="passo-6">
+              <h3>Monte as cenas</h3>
+              <p>
+                Na tela <strong>Transmissão</strong>, use as cenas prontas (Culto,
+                Louvor, Pregação, Aguarde) ou crie as suas. Em cada cena, adicione
+                as câmeras em <strong>Fontes</strong> e arraste na pré-visualização
+                para posicionar. Escolha o layout horizontal ou vertical.
+              </p>
+            </li>
+            <li id="passo-7">
+              <h3>Adicione os destinos</h3>
+              <p>
+                Em <strong>Destinos</strong>, clique em <strong>Adicionar
+                destino</strong>, escolha a plataforma — YouTube, Facebook,
+                Instagram, TikTok, X, Twitch, Kick ou RTMP próprio — e cole a
+                <strong>chave de transmissão</strong> que a plataforma fornece. Dá
+                para adicionar várias plataformas e contas.
+              </p>
+            </li>
+            <li id="passo-8">
+              <h3>Faça um teste</h3>
+              <p>
+                Antes do primeiro culto, faça uma live de teste privada ou não
+                listada. Confira se o som está limpo, se as câmeras estão firmes e
+                se a internet aguenta a qualidade escolhida.
+              </p>
+            </li>
+            <li id="passo-9">
+              <h3>Entre ao vivo</h3>
+              <p>
+                Clique em <strong>Iniciar transmissão</strong>. Prepare a próxima
+                cena na pré-visualização e coloque no ar com corte ou transição.
+                Ative <strong>Gravar no computador</strong> para guardar o culto em
+                MP4.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section stories-section">
+        <div class="container split">
+          <div class="prose reveal">
+            <h2>Bônus: stories do culto com o som da mesa</h2>
+            <p>
+              Enquanto a transmissão acontece, outros celulares da equipe podem
+              gravar stories e reels no modo <strong>Gravar com a mesa</strong>:
+              o celular filma e o áudio vem limpo, direto da mesa. Ao salvar, é só
+              tocar em Instagram ou WhatsApp.
+            </p>
+            <p><a href="stories-com-audio-da-mesa">Veja como gravar stories com o som da mesa</a>.</p>
+          </div>
+          <div class="prose reveal">
+            <h2>Checklist do domingo</h2>
+            <ul>
+              <li>Celulares carregados e nos suportes.</li>
+              <li>Computador e celulares no mesmo Wi-Fi.</li>
+              <li>Medidor da mesa no verde.</li>
+              <li>“Enviar para os celulares” ativo.</li>
+              <li>Cenas conferidas na pré-visualização.</li>
+              <li>Destinos com as chaves certas.</li>
+              <li>Gravar no computador ativado.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section landing-faq" id="perguntas">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">DÚVIDAS FREQUENTES</p>
+            <h2>Perguntas sobre <span class="accent">transmitir o culto.</span></h2>
+          </div>
+          <div class="faq-list" data-faq>
+            <details>
+              <summary>Dá para transmitir o culto só com celular?</summary>
+              <p>Com o Kinnor Live, os celulares são as câmeras e o computador com Windows faz a transmissão. Assim você tem várias câmeras, o som da mesa e cenas, sem comprar equipamento.</p>
+            </details>
+            <details>
+              <summary>Qual programa usar para transmitir o culto de graça?</summary>
+              <p>O Kinnor Live é gratuito, feito para igrejas, e junta câmeras sem fio com celulares, som da mesa e transmissão para várias redes ao mesmo tempo, sem marca d'água.</p>
+            </details>
+            <details>
+              <summary>Como levar o som da mesa para a transmissão?</summary>
+              <p>Ligue a saída da mesa na entrada de áudio do computador com um cabo P2, ou use uma mesa/interface USB, e adicione essa entrada no mixer do Kinnor Live.</p>
+            </details>
+            <details>
+              <summary>Quantas câmeras posso usar?</summary>
+              <p>Até quatro celulares como câmeras ao mesmo tempo.</p>
+            </details>
+            <details>
+              <summary>Precisa de internet boa?</summary>
+              <p>Para a live, sim: a transmissão usa a internet de envio (upload) da igreja. As câmeras e o som funcionam na rede Wi-Fi local, sem gastar internet.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section related">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">CONTINUE LENDO</p>
+            <h2>Aprofunde em <span class="accent">cada parte.</span></h2>
+          </div>
+          <div class="related-grid">
+            <a class="card reveal" href="camera-para-igreja"><strong>Câmera para igreja grátis</strong><span>Posições de câmera e dicas de imagem.</span></a>
+            <a class="card reveal" href="transmissao-ao-vivo-para-igrejas"><strong>Transmissão ao vivo</strong><span>Várias plataformas, vertical e horizontal.</span></a>
+            <a class="card reveal" href="retorno-de-audio-no-celular"><strong>Retorno no celular</strong><span>A equipe ouvindo a mesa no fone.</span></a>
+            <a class="card reveal" href="suporte"><strong>Suporte</strong><span>Soluções para os problemas mais comuns.</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section final-cta">
+        <div class="container final-inner reveal">
+          <div>
+            <p class="eyebrow">COMECE HOJE</p>
+            <h2>Tudo pronto para <span class="accent">o primeiro culto ao vivo?</span></h2>
+            <p>Baixe o Kinnor Live grátis e siga o guia com a sua equipe.</p>
+          </div>
+          <a class="button button-lg" href="download">
+            Baixar grátis
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="./" aria-label="Kinnor Live — página inicial">
+            <img src="assets/img/logo.webp" width="42" height="42" alt="" loading="lazy" />
+            <span><strong>Kinnor Live</strong><small>SUA IGREJA AO VIVO</small></span>
+          </a>
+          <p class="footer-pitch">Programa gratuito para igrejas: câmeras sem fio com celulares, som da mesa nos fones e nos stories, e o culto ao vivo em todas as redes.</p>
+          <div class="footer-ministry">
+            <img src="assets/img/ministerio.webp" width="48" height="48" loading="lazy" alt="Logo do Ministério AD Palmares" />
+            <p>Feito com fé no Ministério AD Palmares.</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h2>Soluções</h2>
+          <a href="camera-para-igreja">Câmera para igreja grátis</a>
+          <a href="stories-com-audio-da-mesa">Stories com o som da mesa</a>
+          <a href="transmissao-ao-vivo-para-igrejas">Transmissão ao vivo</a>
+          <a href="retorno-de-audio-no-celular">Retorno de áudio no celular</a>
+          <a href="como-transmitir-culto-com-celular">Como transmitir o culto</a>
+        </div>
+        <div class="footer-links">
+          <h2>Kinnor Live</h2>
+          <a href="download">Downloads</a>
+          <a href="suporte">Suporte</a>
+          <a href="./#sobre">Nossa história</a>
+          <a href="./#apoie">Apoie o projeto</a>
+          <a href="privacidade">Privacidade</a>
+          <a href="termos">Termos de uso</a>
+          <button type="button" class="footer-cookie" data-cookie-settings hidden>Preferências de cookies</button>
+        </div>
+        <div class="footer-downloads">
+          <h2>Baixe grátis</h2>
+          <a class="footer-win-link" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Setup-1.1.2.exe" data-win-download>
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+            Kinnor Live para Windows
+          </a>
+          <a class="store-badge" href="download#android" data-store="android" aria-label="Disponível no Google Play">
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#play"></use></svg>
+            <span><small>DISPONÍVEL NO</small><strong>Google Play</strong></span>
+          </a>
+          <a class="store-badge" href="download#iphone" data-store="ios" aria-label="Baixar na App Store">
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#apple"></use></svg>
+            <span><small>Baixar na</small><strong>App Store</strong></span>
+          </a>
+          <h2 class="footer-contact-title">Contato</h2>
+          <div class="footer-contact" data-contact data-contact-context="footer">Os canais de contato serão publicados em breve.</div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year>2026</span> Kinnor Live · Feito no Brasil</span>
+        <span>Versão <span data-version>1.1.2</span></span>
+      </div>
+    </footer>
+
+    <div class="download-toast" role="status" aria-live="polite" data-download-toast hidden>
+      <span>Seu download começou.</span>
+      <a href="download#instalar">Ver como instalar</a>
+      <button type="button" aria-label="Fechar aviso" data-toast-close>×</button>
+    </div>
+
+    <div class="cookie-banner" role="region" aria-label="Aviso de cookies" data-cookie-banner hidden>
+      <p>Usamos cookies do Google Analytics para entender, de forma agregada, como o site é usado. Você escolhe. <a href="privacidade#cookies">Saiba mais</a>.</p>
+      <div>
+        <button type="button" class="button button-sm button-ghost" data-cookie-choice="recusado">Recusar</button>
+        <button type="button" class="button button-sm" data-cookie-choice="aceito">Aceitar</button>
+      </div>
+    </div>
+
+    <dialog class="store-dialog" data-store-dialog aria-labelledby="dialog-title" aria-describedby="dialog-text">
+      <div class="dialog-inner">
+        <button type="button" class="dialog-close" aria-label="Fechar" data-dialog-close>×</button>
+        <div class="dialog-icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg></div>
+        <h2 id="dialog-title" data-dialog-title>Em breve</h2>
+        <p id="dialog-text" data-dialog-text></p>
+        <a class="button" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Android-1.1.2.apk" data-apk-download data-dialog-apk>
+          Instalar o app Android direto
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+        </a>
+        <button type="button" class="text-button" data-dialog-close>Entendi</button>
+      </div>
+    </dialog>
+    <!-- /RODAPÉ -->
+  </body>
+</html>

@@ -1,0 +1,42 @@
+# Redirecionamentos permanentes (301) da Cloudflare Pages.
+# A Cloudflare já leva /pagina.html para /pagina sozinha.
+# Formato: origem destino código
+
+/index                     /                                   301
+/home                      /                                   301
+/inicio                    /                                   301
+
+/baixar                    /download                           301
+/downloads                 /download                           301
+/instalar                  /download#instalar                  301
+/windows                   /download#windows                   301
+/app                       /download#android                   301
+/android                   /download#android                   301
+/apk                       /download#android                   301
+/iphone                    /download#iphone                    301
+/ios                       /download#iphone                    301
+
+/camera                    /camera-para-igreja                 301
+/cameras                   /camera-para-igreja                 301
+/webcam                    /camera-para-igreja                 301
+/stories                   /stories-com-audio-da-mesa          301
+/reels                     /stories-com-audio-da-mesa          301
+/transmissao               /transmissao-ao-vivo-para-igrejas   301
+/ao-vivo                   /transmissao-ao-vivo-para-igrejas   301
+/live                      /transmissao-ao-vivo-para-igrejas   301
+/retorno                   /retorno-de-audio-no-celular        301
+/guia                      /como-transmitir-culto-com-celular  301
+/como-transmitir           /como-transmitir-culto-com-celular  301
+
+/ajuda                     /suporte                            301
+/contato                   /suporte#contato                    301
+/faq                       /suporte                            301
+/perguntas-frequentes      /suporte                            301
+/doar                      /#apoie                             301
+/doacao                    /#apoie                             301
+/apoie                     /#apoie                             301
+/ofertas                   /#apoie                             301
+/sobre                     /#sobre                             301
+/privacy                   /privacidade                        301
+/politica-de-privacidade   /privacidade                        301
+/termos-de-uso             /termos                             301

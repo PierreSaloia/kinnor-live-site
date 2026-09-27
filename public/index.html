@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script>
+      document.documentElement.classList.add("js");
+      addEventListener("load", () => {
+        if (!document.documentElement.classList.contains("js-ready"))
+          document.documentElement.classList.remove("js");
+      });
+    </script>
+    <title>Kinnor Live — câmeras e culto ao vivo grátis para igrejas</title>
+    <meta name="description" content="Transforme os celulares da equipe em câmeras sem fio, grave stories com o som da mesa e transmita o culto no YouTube, Facebook e Instagram. Grátis." />
+    <link rel="canonical" href="https://kinnor-live.pages.dev/" data-canonical />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#050b17" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Kinnor Live" />
+    <meta property="og:title" content="Kinnor Live — câmeras e culto ao vivo grátis para igrejas" />
+    <meta property="og:description" content="Os celulares da equipe viram câmeras sem fio, os stories ganham o som da mesa e o culto vai ao vivo para todas as redes. Gratuito." />
+    <meta property="og:url" content="https://kinnor-live.pages.dev/" data-og-url />
+    <meta property="og:image" content="https://kinnor-live.pages.dev/assets/img/og-kinnor-live.png" data-og-image />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kinnor Live: sua igreja ao vivo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kinnor Live — câmeras e culto ao vivo grátis para igrejas" />
+    <meta name="twitter:description" content="Os celulares da equipe viram câmeras sem fio, os stories ganham o som da mesa e o culto vai ao vivo para todas as redes." />
+    <meta name="twitter:image" content="https://kinnor-live.pages.dev/assets/img/og-kinnor-live.png" data-og-image />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preload" href="assets/fonts/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/outfit-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" as="image" href="assets/img/home-1200.webp" imagesrcset="assets/img/home-800.webp 800w, assets/img/home-1200.webp 1200w, assets/img/home-1672.webp 1672w" imagesizes="(max-width: 850px) 92vw, 50vw" fetchpriority="high" />
+    <link rel="stylesheet" href="assets/css/site.css?v=a8723387d9" data-asset />
+    <script type="module" src="assets/js/main.js?v=a8723387d9" data-asset></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://kinnor-live.pages.dev/#site",
+            "url": "https://kinnor-live.pages.dev/",
+            "name": "Kinnor Live",
+            "alternateName": "Kinnor Live — Sua igreja ao vivo",
+            "inLanguage": "pt-BR",
+            "publisher": { "@id": "https://kinnor-live.pages.dev/#org" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://kinnor-live.pages.dev/#org",
+            "name": "Kinnor Live",
+            "url": "https://kinnor-live.pages.dev/",
+            "logo": "https://kinnor-live.pages.dev/assets/img/icon-512.png",
+            "slogan": "Sua igreja ao vivo",
+            "foundingLocation": { "@type": "Country", "name": "Brasil" },
+            "founder": {
+              "@type": "Person",
+              "name": "Pierre Saloia",
+              "affiliation": { "@type": "Organization", "name": "Ministério AD Palmares — Assembleia de Deus Ministério Jardim Palmares" }
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://kinnor-live.pages.dev/#windows",
+            "name": "Kinnor Live para Windows",
+            "applicationCategory": "MultimediaApplication",
+            "applicationSubCategory": "Transmissão ao vivo e áudio para igrejas",
+            "operatingSystem": "Windows 10, Windows 11",
+            "softwareVersion": "1.1.2",
+            "inLanguage": "pt-BR",
+            "isAccessibleForFree": true,
+            "description": "Programa gratuito para igrejas: os celulares da equipe viram câmeras sem fio, o som da mesa vai para os celulares e o culto é transmitido ao vivo para várias redes ao mesmo tempo.",
+            "downloadUrl": "https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Setup-1.1.2.exe",
+            "fileSize": "175 MB",
+            "screenshot": "https://kinnor-live.pages.dev/assets/img/home-1672.webp",
+            "image": "https://kinnor-live.pages.dev/assets/img/og-kinnor-live.png",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+            "publisher": { "@id": "https://kinnor-live.pages.dev/#org" }
+          },
+          {
+            "@type": "MobileApplication",
+            "@id": "https://kinnor-live.pages.dev/#android",
+            "name": "Kinnor Live",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Android 10 ou superior",
+            "softwareVersion": "1.1.2",
+            "inLanguage": "pt-BR",
+            "isAccessibleForFree": true,
+            "description": "App da equipe: câmera, gravação de stories com o som da mesa, webcam sem fio para o computador e retorno de áudio no fone.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+            "publisher": { "@id": "https://kinnor-live.pages.dev/#org" }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json" data-faq-schema>
+      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O Kinnor Live é gratuito mesmo?","acceptedAnswer":{"@type":"Answer","text":"Sim. O programa para Windows e o app são gratuitos, sem mensalidade, sem anúncios e sem marca d'água na transmissão. O projeto é mantido por ofertas voluntárias."}},{"@type":"Question","name":"Preciso de internet para usar?","acceptedAnswer":{"@type":"Answer","text":"Só para transmitir ao vivo. O som da mesa nos celulares, as câmeras sem fio e a gravação de stories funcionam na rede Wi-Fi da igreja, mesmo sem internet."}},{"@type":"Question","name":"Funciona com qualquer mesa de som?","acceptedAnswer":{"@type":"Answer","text":"Sim. Ligue a saída da mesa (rec out, fone ou auxiliar) na entrada de áudio do computador com um cabo P2, ou conecte uma mesa ou interface USB. Depois é só escolher essa entrada no mixer do Kinnor Live."}},{"@type":"Question","name":"Quantos celulares posso usar ao mesmo tempo?","acceptedAnswer":{"@type":"Answer","text":"Até quatro celulares podem ser câmeras (webcams) do computador ao mesmo tempo. Outros celulares da equipe podem receber o som da mesa para retorno ou para gravar stories."}},{"@type":"Question","name":"Os stories ficam com o som melhor mesmo?","acceptedAnswer":{"@type":"Answer","text":"Sim. No modo Gravar com a mesa, o celular filma e o áudio vem direto da mesa de som pelo Wi-Fi, sem passar pelo microfone do aparelho. O som fica limpo, sem eco e sem a distorção das caixas."}},{"@type":"Question","name":"Posso transmitir no YouTube e no Instagram ao mesmo tempo?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Kinnor Live transmite para YouTube, Facebook, Instagram, TikTok, X, Twitch, Kick ou RTMP próprio, com várias contas ao mesmo tempo, na horizontal ou na vertical."}},{"@type":"Question","name":"Aparece a marca do Kinnor Live na transmissão?","acceptedAnswer":{"@type":"Answer","text":"Não. Sua transmissão não recebe marca d'água nem logo do Kinnor Live."}},{"@type":"Question","name":"Quais celulares e computadores são compatíveis?","acceptedAnswer":{"@type":"Answer","text":"O programa roda no Windows 10 e 11 (64 bits). O app funciona no Android 10 ou superior e está chegando à Google Play e à App Store."}},{"@type":"Question","name":"O Windows mostrou um aviso ao instalar. É seguro?","acceptedAnswer":{"@type":"Answer","text":"Sim. Se aparecer “O Windows protegeu o computador”, clique em “Mais informações” e depois em “Executar assim mesmo”. Veja o passo a passo na página de download."}},{"@type":"Question","name":"Onde ficam as gravações?","acceptedAnswer":{"@type":"Answer","text":"Os vídeos gravados no celular ficam na galeria do aparelho. As gravações do computador ficam na pasta Documentos\\KinnorLive. Nada é enviado para servidores do Kinnor Live."}}]}
+    </script>
+  </head>
+  <body>
+    <!-- CABEÇALHO (modelo: esta página; copiado para as outras pelo ATUALIZAR-SITE.bat) -->
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="Kinnor Live — página inicial">
+          <img src="assets/img/logo.webp" width="42" height="42" alt="" />
+          <span><strong>Kinnor Live</strong><small>SUA IGREJA AO VIVO</small></span>
+        </a>
+        <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal" data-menu-button>
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#menu"></use></svg>
+        </button>
+        <nav id="menu-principal" class="nav" aria-label="Navegação principal" data-nav>
+          <a href="camera-para-igreja">Câmeras</a>
+          <a href="stories-com-audio-da-mesa">Stories</a>
+          <a href="transmissao-ao-vivo-para-igrejas">Ao vivo</a>
+          <a href="retorno-de-audio-no-celular">Retorno</a>
+          <a href="como-transmitir-culto-com-celular">Guia</a>
+          <a href="suporte">Suporte</a>
+          <a class="button button-sm" href="download">
+            Baixar grátis
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- /CABEÇALHO -->
+
+    <main id="conteudo">
+      <!-- ABERTURA -->
+      <section class="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="live-dot"></span>GRATUITO · FEITO DENTRO DA IGREJA</p>
+            <h1>Os celulares da equipe viram <em>as câmeras da sua&nbsp;igreja.</em></h1>
+            <p class="lead">
+              Transmita o culto com várias câmeras sem fio, grave stories com o
+              som limpo da mesa e entre ao vivo no YouTube, Facebook e Instagram
+              ao mesmo tempo. Tudo de graça, com o que a equipe já tem no bolso.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-lg" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Setup-1.1.2.exe" data-smart-download>
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+                <span data-smart-label>Baixar grátis para Windows</span>
+              </a>
+              <a class="button button-ghost button-lg" href="#como-funciona">
+                Ver como funciona
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg>
+              </a>
+            </div>
+            <ul class="trust-line">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Gratuito de verdade</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Sem cabos</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Sem marca d'água na live</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Sem cadastro</li>
+            </ul>
+          </div>
+          <div class="hero-visual">
+            <div class="window-frame">
+              <div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>Kinnor Live</span><span class="window-line"></span></div>
+              <img src="assets/img/home-1200.webp" srcset="assets/img/home-800.webp 800w, assets/img/home-1200.webp 1200w, assets/img/home-1672.webp 1672w" sizes="(max-width: 850px) 92vw, 50vw" width="1200" height="676" alt="Central de Transmissão do Kinnor Live com o áudio da mesa, as câmeras dos celulares e a transmissão ao vivo" fetchpriority="high" />
+            </div>
+            <div class="hero-phone" aria-hidden="true">
+              <div class="phone phone-small" data-phone-demo data-mode-active="mesa">
+                <div class="phone-screen">
+                  <div class="phone-photo phone-photo-camera"></div>
+                  <div class="phone-photo phone-photo-mesa"></div>
+                  <div class="phone-photo phone-photo-webcam"></div>
+                  <div class="phone-shade"></div>
+                  <div class="phone-status"><span>9:41</span><span>● ▰</span></div>
+                  <div class="phone-top">
+                    <span class="phone-round"><svg class="icon"><use href="assets/img/icons.svg#settings"></use></svg></span>
+                    <span class="phone-pill"><i class="dot green"></i><span>Áudio da mesa · Conectado</span></span>
+                    <span class="phone-round"><svg class="icon"><use href="assets/img/icons.svg#switch"></use></svg></span>
+                  </div>
+                  <div class="phone-webcam"><i class="dot red"></i>Webcam 2 · no computador</div>
+                  <div class="phone-bottom">
+                    <span class="zoom">1x</span>
+                    <span class="quality">1080p · 30 fps</span>
+                    <span class="camera-quality">Foto · Vídeo com microfone do celular</span>
+                    <span class="return">● &nbsp; Ouvir a mesa (retorno)</span>
+                    <div class="phone-controls">
+                      <span class="phone-round"><svg class="icon"><use href="assets/img/icons.svg#image"></use></svg></span>
+                      <span class="record"><svg class="icon capture-video"><use href="assets/img/icons.svg#video"></use></svg><svg class="icon capture-photo"><use href="assets/img/icons.svg#camera"></use></svg></span>
+                      <span class="phone-round"><svg class="icon"><use href="assets/img/icons.svg#sliders"></use></svg></span>
+                    </div>
+                    <div class="phone-tabs" role="tablist" aria-label="Modos do aplicativo" data-phone-tabs>
+                      <button type="button" role="tab" data-mode="camera" aria-selected="false" tabindex="-1">CÂMERA</button>
+                      <button type="button" role="tab" data-mode="mesa" aria-selected="true" tabindex="-1">GRAVAR COM A MESA</button>
+                      <button type="button" role="tab" data-mode="webcam" aria-selected="false" tabindex="-1">WEBCAM</button>
+                    </div>
+                    <span class="phone-handle"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-audio" aria-hidden="true">
+              <span class="audio-label">Som da mesa chegando à equipe</span>
+              <div class="meter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bottom" aria-hidden="true"></div>
+      </section>
+
+      <!-- NÚMEROS DO PRODUTO -->
+      <section class="highlights" aria-label="O Kinnor Live em números">
+        <div class="container highlights-grid">
+          <div><strong>4 câmeras</strong><span>celulares viram webcams sem fio</span></div>
+          <div><strong>8 destinos</strong><span>YouTube, Facebook, Instagram e mais, juntos</span></div>
+          <div><strong>Som da mesa</strong><span>nos fones e nos stories da equipe</span></div>
+          <div><strong>R$ 0</strong><span>sem mensalidade e sem anúncios</span></div>
+        </div>
+      </section>
+
+      <!-- SOLUÇÕES -->
+      <section class="section pillars" id="recursos">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <p class="eyebrow">UMA CENTRAL PARA TODO O MINISTÉRIO DE MÍDIA</p>
+            <h2>Tudo o que a mídia da igreja precisa, <span class="accent">em um só programa gratuito.</span></h2>
+            <p>
+              Câmeras, som, redes sociais e transmissão costumam exigir
+              equipamentos caros e vários programas. O Kinnor Live junta tudo
+              e usa o que a sua equipe já tem: um computador e os celulares.
+            </p>
+          </div>
+          <div class="pillar-grid">
+            <a class="card pillar reveal" href="camera-para-igreja">
+              <div class="feature-icon blue"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#camera"></use></svg></div>
+              <h3>Câmeras sem custo</h3>
+              <p>Cada celular vira uma câmera sem fio no computador, em até Full HD. Monte uma transmissão com vários ângulos sem comprar nenhuma câmera.</p>
+              <span class="card-foot">Câmera para igreja grátis<svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg></span>
+            </a>
+            <a class="card pillar reveal" href="stories-com-audio-da-mesa">
+              <div class="feature-icon cyan"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#sparkles"></use></svg></div>
+              <h3>Stories com o som da mesa</h3>
+              <p>Vídeos gravados no celular com o áudio que sai da mesa: limpo, equilibrado, sem estourar. Prontos para o Instagram e o WhatsApp.</p>
+              <span class="card-foot">Stories com som de verdade<svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg></span>
+            </a>
+            <a class="card pillar reveal" href="transmissao-ao-vivo-para-igrejas">
+              <div class="feature-icon red"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#broadcast"></use></svg></div>
+              <h3>Ao vivo em todas as redes</h3>
+              <p>Cenas, prévia e transições em um estúdio simples. Transmita para várias plataformas e contas ao mesmo tempo, na horizontal ou na vertical.</p>
+              <span class="card-foot">Transmissão do culto ao vivo<svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg></span>
+            </a>
+            <a class="card pillar reveal" href="retorno-de-audio-no-celular">
+              <div class="feature-icon amber"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#headphones"></use></svg></div>
+              <h3>Retorno no fone</h3>
+              <p>Músicos, vocais e voluntários ouvem a mesa pelo próprio celular com um fone de ouvido, pelo Wi-Fi da igreja.</p>
+              <span class="card-foot">Retorno de áudio no celular<svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORIES COM O SOM DA MESA -->
+      <section class="section stories-section" id="stories">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">O DIFERENCIAL DOS STORIES DA SUA IGREJA</p>
+            <h2>Chega de stories com <span class="accent">o som estourado.</span></h2>
+            <p>
+              Quem já gravou o louvor pelo celular conhece o resultado: o
+              microfone fica perto das caixas, o som distorce, pega o eco do
+              templo e a conversa de quem está do lado. No Kinnor Live o celular
+              filma e o áudio chega direto da mesa, pelo Wi-Fi, do jeito que o
+              técnico de som mixou.
+            </p>
+          </div>
+          <div class="compare">
+            <article class="compare-card bad reveal">
+              <header>
+                <span class="compare-icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#mic"></use></svg></span>
+                <div><h3>Microfone do celular</h3><p>como quase todo story é gravado hoje</p></div>
+              </header>
+              <div class="wave wave-bad" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <ul class="compare-list">
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#x"></use></svg>Distorce com o volume das caixas de som</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#x"></use></svg>Eco do templo e ruído de quem está perto</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#x"></use></svg>A voz da pregação se perde no meio do som</li>
+              </ul>
+            </article>
+            <article class="compare-card good reveal">
+              <header>
+                <span class="compare-icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#sliders"></use></svg></span>
+                <div><h3>Som da mesa com o Kinnor Live</h3><p>o celular filma, a mesa entrega o áudio</p></div>
+              </header>
+              <div class="wave wave-good" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <ul class="compare-list">
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Voz clara e instrumentos equilibrados</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Sem eco, sem conversa, sem distorção</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Mesa, microfones e até o som do computador no mesmo vídeo</li>
+              </ul>
+            </article>
+          </div>
+          <ol class="mini-steps reveal">
+            <li><span>1</span><p>No app, escolha <strong>Gravar com a mesa</strong>.</p></li>
+            <li><span>2</span><p>Grave o louvor, um trecho da pregação ou um aviso.</p></li>
+            <li><span>3</span><p>Toque em <strong>Instagram</strong> ou <strong>WhatsApp</strong> e poste na hora.</p></li>
+          </ol>
+          <p class="section-link reveal">
+            <a href="stories-com-audio-da-mesa">Como gravar stories e reels com o som da mesa<svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- VÁRIAS EQUIPES -->
+      <section class="section teams-section" id="equipes">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <p class="eyebrow">VÁRIAS EQUIPES, AO MESMO TEMPO</p>
+            <h2>Cada voluntário no seu papel. <span class="accent">Todos no mesmo culto.</span></h2>
+            <p>
+              Enquanto a transmissão acontece, cada celular conectado pode fazer
+              uma coisa diferente — e o computador acompanha todos em um só painel.
+            </p>
+          </div>
+          <div class="teams-grid">
+            <article class="card team reveal">
+              <div class="feature-icon blue"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#camera"></use></svg></div>
+              <h3>Transmissão</h3>
+              <p>Até quatro celulares como câmeras do culto, com zoom, lente e qualidade ajustados de longe.</p>
+            </article>
+            <article class="card team reveal">
+              <div class="feature-icon cyan"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#share"></use></svg></div>
+              <h3>Redes sociais</h3>
+              <p>Quem cuida do Instagram grava stories e cortes com o som da mesa e posta na mesma hora.</p>
+            </article>
+            <article class="card team reveal">
+              <div class="feature-icon amber"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#headphones"></use></svg></div>
+              <h3>Louvor</h3>
+              <p>Músicos e vocais ouvem a mesa no fone, pelo próprio celular, sem cabo até o palco.</p>
+            </article>
+            <article class="card team reveal">
+              <div class="feature-icon red"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#sliders"></use></svg></div>
+              <h3>Som</h3>
+              <p>O técnico junta mesa, microfones e computador e decide o que vai para os celulares e para a live.</p>
+            </article>
+            <article class="card team reveal">
+              <div class="feature-icon blue"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#users"></use></svg></div>
+              <h3>Coordenação</h3>
+              <p>Um painel mostra cada celular com função, bateria e sinal, e troca o papel de qualquer um com um clique.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMO FUNCIONA -->
+      <section class="section how-section" id="como-funciona">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">COMECE COM O QUE VOCÊ TEM</p>
+            <h2>Da mesa de som para o mundo, <span class="accent">em quatro passos.</span></h2>
+            <p>Um computador com Windows, os celulares da equipe e o Wi-Fi da igreja. Só isso.</p>
+          </div>
+          <div class="how-grid">
+            <ol class="steps">
+              <li class="step reveal">
+                <span>01</span>
+                <div><h3>Instale no computador</h3><p>Baixe grátis, instale no Windows e ligue a mesa pelo cabo P2 ou por USB.</p></div>
+              </li>
+              <li class="step reveal">
+                <span>02</span>
+                <div><h3>Conecte a equipe</h3><p>Cada voluntário instala o app, entra no Wi-Fi da igreja e aponta a câmera para o QR Code da tela.</p></div>
+              </li>
+              <li class="step reveal">
+                <span>03</span>
+                <div><h3>Dê um papel a cada celular</h3><p>Câmera da transmissão, stories com o som da mesa ou retorno no fone.</p></div>
+              </li>
+              <li class="step reveal">
+                <span>04</span>
+                <div><h3>Entre ao vivo</h3><p>Monte as cenas, escolha as redes e comece. O culto também fica gravado no computador.</p></div>
+              </li>
+            </ol>
+            <div class="flow-card card reveal">
+              <span class="flow-label">TUDO CONECTADO</span>
+              <div class="flow-node"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#audio"></use></svg><span>Mesa de som</span></div>
+              <div class="flow-link-vertical" aria-hidden="true"><i></i></div>
+              <div class="flow-node main"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#monitor"></use></svg><span>Kinnor Live no computador</span></div>
+              <div class="flow-branches" aria-hidden="true"><span class="flow-branch flow-branch-left"><i></i></span><span class="flow-branch flow-branch-right"><i></i></span></div>
+              <div class="flow-ends">
+                <div class="flow-node"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#phone"></use></svg><span>Celulares da equipe</span></div>
+                <div class="flow-node"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#broadcast"></use></svg><span>Redes sociais</span></div>
+              </div>
+              <p>O som e as câmeras circulam na rede local da igreja. A internet só é usada para a transmissão.</p>
+            </div>
+          </div>
+          <p class="section-link reveal">
+            <a href="como-transmitir-culto-com-celular">Guia completo: como transmitir o culto com celular<svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- RECURSOS EM DETALHE -->
+      <section class="section detail-section" id="programa">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <p class="eyebrow">CONHEÇA O PROGRAMA</p>
+            <h2>Profissional no resultado. <span class="accent">Simples para o voluntário.</span></h2>
+          </div>
+
+          <article class="feature-row reveal" id="mixer">
+            <div class="feature-copy">
+              <p class="eyebrow">01 / ÁUDIO</p>
+              <h3>Um mixer pensado para o técnico de som voluntário.</h3>
+              <p>
+                Junte a mesa, os microfones e o som do computador — vídeos,
+                músicas, vinhetas. Cada fonte tem volume, mudo, pré-escuta e
+                medidor, e você decide o que vai para os celulares e o que vai
+                para a transmissão.
+              </p>
+              <ul class="check-list">
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Mesa pelo cabo P2 ou por USB</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Saídas separadas para celulares e live, com limitador</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Uma falha no Wi-Fi não vira corte no som</li>
+              </ul>
+            </div>
+            <div class="window-frame">
+              <div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>Kinnor Live</span><span class="window-line"></span></div>
+              <img src="assets/img/audio-1200.webp" srcset="assets/img/audio-800.webp 800w, assets/img/audio-1200.webp 1200w, assets/img/audio-1672.webp 1672w" sizes="(max-width: 850px) 92vw, 60vw" width="1200" height="676" alt="Tela Áudio do Kinnor Live: mixer com mesa, microfone e som do computador, cada um com volume e medidor" loading="lazy" decoding="async" />
+            </div>
+          </article>
+
+          <article class="feature-row reverse reveal" id="cameras">
+            <div class="feature-copy">
+              <p class="eyebrow">02 / CÂMERAS</p>
+              <h3>Até quatro câmeras sem fio, sem comprar câmera.</h3>
+              <p>
+                No modo Webcam, cada celular aparece no Windows como “Kinnor Live
+                Câmera 1” a “Câmera 4”. Use no estúdio do próprio Kinnor ou em
+                qualquer programa de transmissão e de videochamada.
+              </p>
+              <ul class="check-list">
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Webcams criadas sozinhas, sem pedir administrador</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Zoom, lente, qualidade e quadros por segundo controlados do computador</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Sem cabo: tudo pelo Wi-Fi da igreja</li>
+              </ul>
+            </div>
+            <div class="window-frame">
+              <div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>Kinnor Live</span><span class="window-line"></span></div>
+              <img src="assets/img/cameras-1200.webp" srcset="assets/img/cameras-800.webp 800w, assets/img/cameras-1200.webp 1200w, assets/img/cameras-1672.webp 1672w" sizes="(max-width: 850px) 92vw, 60vw" width="1200" height="676" alt="Tela Câmeras do Kinnor Live: quatro celulares da equipe funcionando como webcams do Windows" loading="lazy" decoding="async" />
+            </div>
+          </article>
+
+          <article class="feature-row reveal" id="estudio">
+            <div class="feature-copy">
+              <p class="eyebrow">03 / TRANSMISSÃO</p>
+              <h3>Um estúdio completo, simples como deve ser.</h3>
+              <p>
+                Prepare cenas para o louvor, a pregação e o intervalo, confira na
+                pré-visualização e coloque no ar com corte ou transição.
+                Transmita na horizontal para o YouTube e na vertical para o
+                Instagram e o TikTok.
+              </p>
+              <ul class="check-list">
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Várias plataformas e contas ao mesmo tempo</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Até 1080p, com gravação MP4 no computador</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Sem marca d'água: a transmissão é da sua igreja</li>
+              </ul>
+            </div>
+            <div class="window-frame">
+              <div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>Kinnor Live</span><span class="window-line"></span></div>
+              <img src="assets/img/live-1200.webp" srcset="assets/img/live-800.webp 800w, assets/img/live-1200.webp 1200w, assets/img/live-1672.webp 1672w" sizes="(max-width: 850px) 92vw, 60vw" width="1200" height="676" alt="Tela Transmissão do Kinnor Live: pré-visualização, imagem ao vivo, cenas e destinos" loading="lazy" decoding="async" />
+            </div>
+          </article>
+          <ul class="platforms reveal" aria-label="Plataformas de transmissão">
+            <li>YouTube</li><li>Facebook</li><li>Instagram</li><li>TikTok</li><li>X</li><li>Twitch</li><li>Kick</li><li>RTMP próprio</li>
+          </ul>
+
+          <article class="feature-row reverse reveal" id="dispositivos">
+            <div class="feature-copy">
+              <p class="eyebrow">04 / EQUIPE</p>
+              <h3>Controle cada celular sem sair da mesa.</h3>
+              <p>
+                Veja bateria, sinal e função de cada aparelho. Troque o modo,
+                ajuste a câmera ou comece a gravar à distância — sem interromper
+                quem está filmando.
+              </p>
+              <ul class="check-list">
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Um painel para a equipe inteira</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Ajustes sem pegar o celular de quem está filmando</li>
+              </ul>
+            </div>
+            <div class="window-frame">
+              <div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>Kinnor Live</span><span class="window-line"></span></div>
+              <img src="assets/img/devices-1200.webp" srcset="assets/img/devices-800.webp 800w, assets/img/devices-1200.webp 1200w, assets/img/devices-1672.webp 1672w" sizes="(max-width: 850px) 92vw, 60vw" width="1200" height="676" alt="Tela Dispositivos do Kinnor Live: lista dos celulares com função, bateria e sinal" loading="lazy" decoding="async" />
+            </div>
+          </article>
+
+          <article class="feature-row reveal" id="rede">
+            <div class="feature-copy">
+              <p class="eyebrow">05 / CONEXÃO</p>
+              <h3>Apontou a câmera, conectou.</h3>
+              <p>
+                O celular lê o QR Code na tela do computador e se conecta sozinho.
+                O programa também encontra os celulares na rede e oferece o app
+                Android pelo mesmo QR Code.
+              </p>
+              <ul class="check-list">
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Celulares e computador no mesmo Wi-Fi</li>
+                <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Sem digitar endereço, sem configurar rede</li>
+              </ul>
+            </div>
+            <div class="window-frame">
+              <div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>Kinnor Live</span><span class="window-line"></span></div>
+              <img src="assets/img/network-1200.webp" srcset="assets/img/network-800.webp 800w, assets/img/network-1200.webp 1200w, assets/img/network-1672.webp 1672w" sizes="(max-width: 850px) 92vw, 60vw" width="1200" height="676" alt="Tela Rede do Kinnor Live: QR Code para conectar os celulares e o estado da conexão" loading="lazy" decoding="async" />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- APP NO CELULAR -->
+      <section class="section app-section" id="app">
+        <div class="container app-grid">
+          <div class="app-copy reveal">
+            <p class="eyebrow">O APP DA EQUIPE</p>
+            <h2>Um app, <span class="accent">três jeitos de servir.</span></h2>
+            <p class="large-p">
+              Abre direto na câmera, com poucos botões, para o voluntário se
+              concentrar no culto. É só deslizar para trocar de modo.
+            </p>
+            <!-- Cada item mostra o modo no celular ao lado (main.js) -->
+            <div class="mode-list" data-mode-list>
+              <button type="button" data-mode-select="camera" aria-pressed="false">
+                <span class="mode-number">01</span>
+                <strong>Câmera</strong>
+                <span class="mode-text">Foto e vídeo com o microfone do celular, para os momentos do dia a dia.</span>
+              </button>
+              <button type="button" data-mode-select="mesa" aria-pressed="true">
+                <span class="mode-number">02</span>
+                <strong>Gravar com a mesa</strong>
+                <span class="mode-text">Stories, reels e cortes com o som limpo da mesa. Ao salvar, poste direto no Instagram ou no WhatsApp.</span>
+              </button>
+              <button type="button" data-mode-select="webcam" aria-pressed="false">
+                <span class="mode-number">03</span>
+                <strong>Webcam</strong>
+                <span class="mode-text">O celular vira uma câmera do computador, sem fio, para a transmissão.</span>
+              </button>
+            </div>
+            <p class="app-note">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#headphones"></use></svg>
+              Em qualquer modo, o celular também toca o som da mesa no fone, como retorno.
+            </p>
+            <div class="store-row">
+              <a class="store-badge" href="download#android" data-store="android" aria-label="Disponível no Google Play">
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#play"></use></svg>
+                <span><small>DISPONÍVEL NO</small><strong>Google Play</strong></span>
+              </a>
+              <a class="store-badge" href="download#iphone" data-store="ios" aria-label="Baixar na App Store">
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#apple"></use></svg>
+                <span><small>Baixar na</small><strong>App Store</strong></span>
+              </a>
+            </div>
+          </div>
+          <div class="app-phone-wrap reveal">
+            <div class="phone" data-phone-demo data-mode-active="mesa">
+              <div class="phone-screen">
+                <div class="phone-photo phone-photo-camera" role="img" aria-label="Guitarrista tocando no louvor, visto pela câmera do celular"></div>
+                <div class="phone-photo phone-photo-mesa" role="img" aria-label="Cantora do louvor gravada pelo celular com o som da mesa"></div>
+                <div class="phone-photo phone-photo-webcam" role="img" aria-label="Pregador no púlpito, transmitido pelo celular como webcam"></div>
+                <div class="phone-shade"></div>
+                <div class="phone-status" aria-hidden="true"><span>9:41</span><span>● ▰</span></div>
+                <div class="phone-top" aria-hidden="true">
+                  <span class="phone-round"><svg class="icon"><use href="assets/img/icons.svg#settings"></use></svg></span>
+                  <span class="phone-pill"><i class="dot green"></i><span>Áudio da mesa · Conectado</span></span>
+                  <span class="phone-round"><svg class="icon"><use href="assets/img/icons.svg#switch"></use></svg></span>
+                </div>
+                <div class="phone-webcam" aria-hidden="true"><i class="dot red"></i>Webcam 2 · no computador</div>
+                <div class="phone-bottom">
+                  <span class="zoom" aria-hidden="true">1x</span>
+                  <span class="quality" aria-hidden="true">1080p · 30 fps</span>
+                  <span class="camera-quality" aria-hidden="true">Foto · Vídeo com microfone do celular</span>
+                  <span class="return" aria-hidden="true">● &nbsp; Ouvir a mesa (retorno)</span>
+                  <div class="phone-controls" aria-hidden="true">
+                    <span class="phone-round"><svg class="icon"><use href="assets/img/icons.svg#image"></use></svg></span>
+                    <span class="record"><svg class="icon capture-video"><use href="assets/img/icons.svg#video"></use></svg><svg class="icon capture-photo"><use href="assets/img/icons.svg#camera"></use></svg></span>
+                    <span class="phone-round"><svg class="icon"><use href="assets/img/icons.svg#sliders"></use></svg></span>
+                  </div>
+                  <div class="phone-tabs" role="tablist" aria-label="Modos do aplicativo" data-phone-tabs>
+                    <button type="button" role="tab" data-mode="camera" aria-selected="false" tabindex="-1">CÂMERA</button>
+                    <button type="button" role="tab" data-mode="mesa" aria-selected="true">GRAVAR COM A MESA</button>
+                    <button type="button" role="tab" data-mode="webcam" aria-selected="false" tabindex="-1">WEBCAM</button>
+                  </div>
+                  <span class="phone-handle" aria-hidden="true"></span>
+                </div>
+              </div>
+            </div>
+            <p class="phone-description" data-mode-description aria-live="polite">Vídeo no celular com o som limpo da mesa.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERIA -->
+      <section class="section gallery-section" id="telas">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <p class="eyebrow">POR DENTRO DO KINNOR LIVE</p>
+            <h2>Veja o programa <span class="accent">em ação.</span></h2>
+          </div>
+          <div class="gallery card reveal" data-gallery>
+            <div class="gallery-tabs" role="tablist" aria-label="Telas do programa">
+              <button role="tab" type="button" data-gallery-tab aria-selected="true">Início</button>
+              <button role="tab" type="button" data-gallery-tab aria-selected="false" tabindex="-1">Áudio</button>
+              <button role="tab" type="button" data-gallery-tab aria-selected="false" tabindex="-1">Câmeras</button>
+              <button role="tab" type="button" data-gallery-tab aria-selected="false" tabindex="-1">Transmissão</button>
+              <button role="tab" type="button" data-gallery-tab aria-selected="false" tabindex="-1">Dispositivos</button>
+              <button role="tab" type="button" data-gallery-tab aria-selected="false" tabindex="-1">Rede</button>
+            </div>
+            <div class="window-frame">
+              <div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>Kinnor Live</span><span class="window-line"></span></div>
+              <img src="assets/img/home-1200.webp" srcset="assets/img/home-800.webp 800w, assets/img/home-1200.webp 1200w, assets/img/home-1672.webp 1672w" sizes="(max-width: 760px) 94vw, 1030px" width="1200" height="676" alt="Tela Início do programa Kinnor Live" loading="lazy" decoding="async" data-gallery-image />
+            </div>
+            <p class="gallery-caption" data-gallery-caption>Tudo o que importa para o culto, em uma visão.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOWNLOADS -->
+      <section class="section download-section" id="baixar">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">COMECE A USAR</p>
+            <h2>Pronto para o <span class="accent">próximo culto?</span></h2>
+            <p>Instale no computador da mídia e chame a equipe. Em poucos minutos os celulares já estão conectados.</p>
+          </div>
+          <div class="download-grid">
+            <div class="card download-card reveal">
+              <div class="feature-icon blue"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#monitor"></use></svg></div>
+              <h3>Kinnor Live para Windows</h3>
+              <p>Gratuito · Versão <span data-version>1.1.2</span> · <span data-win-size>175 MB</span></p>
+              <p class="muted" data-win-requirements>Windows 10 ou 11 (64 bits)</p>
+              <a class="button" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Setup-1.1.2.exe" data-win-download>
+                Baixar para Windows
+                <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+              </a>
+            </div>
+            <div class="card download-card reveal">
+              <div class="feature-icon cyan"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#phone"></use></svg></div>
+              <h3>App para a equipe</h3>
+              <p>Câmera, stories com o som da mesa, webcam sem fio e retorno no fone.</p>
+              <div class="store-row">
+                <a class="store-badge" href="download#android" data-store="android" aria-label="Disponível no Google Play">
+                  <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#play"></use></svg>
+                  <span><small>DISPONÍVEL NO</small><strong>Google Play</strong></span>
+                </a>
+                <a class="store-badge" href="download#iphone" data-store="ios" aria-label="Baixar na App Store">
+                  <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#apple"></use></svg>
+                  <span><small>Baixar na</small><strong>App Store</strong></span>
+                </a>
+              </div>
+              <p class="muted">Chegando às lojas. No Android você já pode <a href="download#android">instalar o app direto</a>.</p>
+            </div>
+          </div>
+          <p class="section-link">
+            <a href="download">Todas as opções e o passo a passo de instalação<svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- NOSSA HISTÓRIA -->
+      <section class="section story-section" id="sobre">
+        <div class="container">
+          <div class="story-grid">
+            <div class="story-visual reveal">
+              <img class="ministry-logo" src="assets/img/ministerio.webp" width="360" height="360" loading="lazy" decoding="async" alt="Logo do Ministério AD Palmares" />
+              <p class="story-quote">“Feito dentro da igreja<br />para servir a outras igrejas.”</p>
+            </div>
+            <div class="story-copy reveal">
+              <p class="eyebrow">NOSSA HISTÓRIA</p>
+              <h2>Nascido no Ministério <span class="accent">AD&nbsp;Palmares.</span></h2>
+              <p>
+                O Kinnor Live começou na equipe de mídia da Assembleia de Deus ·
+                Ministério Jardim Palmares (ADMJP). Pierre Saloia queria
+                transmitir os cultos com qualidade, mas as ferramentas eram
+                caras, complicadas ou exigiam equipamentos que a igreja não tinha.
+              </p>
+              <p>
+                Então ele construiu a própria plataforma: os celulares da equipe
+                como câmeras, o som da mesa nos fones e nas gravações, e a
+                transmissão ao vivo em várias redes. O que começou para servir
+                uma igreja agora é oferecido a todas, com o mesmo propósito:
+                expandir o Reino de Jesus Cristo e levar a mensagem do Evangelho
+                mais longe.
+              </p>
+              <div class="author">
+                <img src="assets/img/pierre.webp" width="68" height="68" loading="lazy" decoding="async" alt="Pierre Saloia" />
+                <span><strong>Pierre Saloia</strong><small>Desenvolvedor · equipe de mídia do Ministério AD Palmares</small></span>
+              </div>
+            </div>
+          </div>
+          <div class="why-card card reveal">
+            <div class="feature-icon blue"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#harp"></use></svg></div>
+            <div>
+              <h3>Por que “Kinnor”?</h3>
+              <p>
+                Kinnor (כִּנּוֹר) é a palavra hebraica para a harpa, o instrumento
+                que Davi tocava para adorar a Deus (1 Samuel 16:23). Queremos que
+                a tecnologia também seja instrumento de adoração.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRATUITO E MANTIDO POR OFERTAS -->
+      <section class="section support-section" id="apoie">
+        <div class="container support-grid">
+          <div class="reveal">
+            <p class="eyebrow">GRATUITO DE VERDADE</p>
+            <h2>Sem mensalidade. Sem&nbsp;anúncios. <span class="gold">Mantido por&nbsp;ofertas.</span></h2>
+            <p>
+              O Kinnor Live é gratuito para qualquer igreja, sem planos e sem
+              prazo para acabar. O projeto se mantém como os grandes projetos
+              livres e comunitários: com ofertas voluntárias de irmãos e igrejas
+              que são abençoados por ele.
+            </p>
+            <ul class="free-list">
+              <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Sem mensalidade e sem período de teste</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Sem anúncios e sem marca d'água na sua live</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Sem cadastro: instale e use</li>
+              <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#check"></use></svg>Novas versões para todas as igrejas</li>
+            </ul>
+            <blockquote>
+              “Mais bem-aventurada coisa é dar do que receber.”
+              <cite>Atos 20:35</cite>
+            </blockquote>
+          </div>
+          <div class="card donation-card reveal" data-donation>
+            <div class="feature-icon amber"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#heart"></use></svg></div>
+            <h3>Faça parte dessa missão</h3>
+            <p data-donation-intro>Pix ou cartão, com qualquer valor, em página segura do Mercado Pago.</p>
+            <div class="amounts" data-amounts hidden>
+              <label><input type="radio" name="amount" value="10" /> R$ 10</label>
+              <label><input type="radio" name="amount" value="25" checked /> R$ 25</label>
+              <label><input type="radio" name="amount" value="50" /> R$ 50</label>
+              <label><input type="radio" name="amount" value="100" /> R$ 100</label>
+              <label><input type="radio" name="amount" value="other" /> Outro valor</label>
+            </div>
+            <label class="sr-only" for="other-amount">Outro valor em reais</label>
+            <input id="other-amount" class="field" type="number" min="0" step="0.01" placeholder="Valor em reais" data-amount-other hidden />
+            <div data-pix-area hidden>
+              <img width="160" height="160" alt="QR Code Pix sem valor fixo" data-pix-qr hidden />
+              <label for="pix-code">Pix copia e cola</label>
+              <textarea id="pix-code" class="field" data-pix-code rows="3" readonly></textarea>
+              <button class="button" type="button" data-pix-copy>Copiar Pix</button>
+              <p class="muted">O QR Code não inclui valor; digite o valor escolhido no seu banco.</p>
+            </div>
+            <a class="button button-gold" data-card-link hidden>
+              Doar com cartão
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg>
+            </a>
+            <a class="button button-gold donation-page" href="https://kinnor-doacoes.servidor-doacoes.workers.dev/doar" target="_blank" rel="noopener" data-donation-page>
+              Ofertar agora
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#heart"></use></svg>
+            </a>
+            <div class="donation-fallback" data-donation-fallback hidden>
+              <strong>As ofertas online abrem em breve.</strong>
+              <span>Obrigado por caminhar com este projeto.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERGUNTAS FREQUENTES (o FAQPage do Google é gerado desta lista pelo ATUALIZAR-SITE.bat) -->
+      <section class="section faq-section" id="perguntas">
+        <div class="container faq-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow">DÚVIDAS FREQUENTES</p>
+            <h2>Respostas para <span class="accent">começar tranquilo.</span></h2>
+            <p>Não achou sua dúvida? Veja o <a href="suporte">guia de suporte</a>.</p>
+          </div>
+          <div class="faq-list" data-faq>
+            <details>
+              <summary>O Kinnor Live é gratuito mesmo?</summary>
+              <p>Sim. O programa para Windows e o app são gratuitos, sem mensalidade, sem anúncios e sem marca d'água na transmissão. O projeto é mantido por ofertas voluntárias.</p>
+            </details>
+            <details>
+              <summary>Preciso de internet para usar?</summary>
+              <p>Só para transmitir ao vivo. O som da mesa nos celulares, as câmeras sem fio e a gravação de stories funcionam na rede Wi-Fi da igreja, mesmo sem internet.</p>
+            </details>
+            <details>
+              <summary>Funciona com qualquer mesa de som?</summary>
+              <p>Sim. Ligue a saída da mesa (rec out, fone ou auxiliar) na entrada de áudio do computador com um cabo P2, ou conecte uma mesa ou interface USB. Depois é só escolher essa entrada no mixer do Kinnor Live.</p>
+            </details>
+            <details>
+              <summary>Quantos celulares posso usar ao mesmo tempo?</summary>
+              <p>Até quatro celulares podem ser câmeras (webcams) do computador ao mesmo tempo. Outros celulares da equipe podem receber o som da mesa para retorno ou para gravar stories.</p>
+            </details>
+            <details>
+              <summary>Os stories ficam com o som melhor mesmo?</summary>
+              <p>Sim. No modo Gravar com a mesa, o celular filma e o áudio vem direto da mesa de som pelo Wi-Fi, sem passar pelo microfone do aparelho. O som fica limpo, sem eco e sem a distorção das caixas.</p>
+            </details>
+            <details>
+              <summary>Posso transmitir no YouTube e no Instagram ao mesmo tempo?</summary>
+              <p>Sim. O Kinnor Live transmite para YouTube, Facebook, Instagram, TikTok, X, Twitch, Kick ou RTMP próprio, com várias contas ao mesmo tempo, na horizontal ou na vertical.</p>
+            </details>
+            <details>
+              <summary>Aparece a marca do Kinnor Live na transmissão?</summary>
+              <p>Não. Sua transmissão não recebe marca d'água nem logo do Kinnor Live.</p>
+            </details>
+            <details>
+              <summary>Quais celulares e computadores são compatíveis?</summary>
+              <p>O programa roda no Windows 10 e 11 (64 bits). O app funciona no Android 10 ou superior e está chegando à Google Play e à App Store.</p>
+            </details>
+            <details>
+              <summary>O Windows mostrou um aviso ao instalar. É seguro?</summary>
+              <p>Sim. Se aparecer “O Windows protegeu o computador”, clique em “Mais informações” e depois em “Executar assim mesmo”. Veja o passo a passo na <a href="download#instalar">página de download</a>.</p>
+            </details>
+            <details>
+              <summary>Onde ficam as gravações?</summary>
+              <p>Os vídeos gravados no celular ficam na galeria do aparelho. As gravações do computador ficam na pasta Documentos\KinnorLive. Nada é enviado para servidores do Kinnor Live.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHAMADA FINAL -->
+      <section class="section final-cta">
+        <div class="container final-inner reveal">
+          <div>
+            <p class="eyebrow">SUA IGREJA AO VIVO</p>
+            <h2>A mensagem merece <span class="accent">chegar mais longe.</span></h2>
+            <p>Baixe o Kinnor Live e comece com a equipe e os celulares que vocês já têm.</p>
+          </div>
+          <a class="button button-lg" href="download">
+            Baixar grátis
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#arrow"></use></svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- RODAPÉ (modelo: esta página; copiado para as outras pelo ATUALIZAR-SITE.bat) -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="./" aria-label="Kinnor Live — página inicial">
+            <img src="assets/img/logo.webp" width="42" height="42" alt="" loading="lazy" />
+            <span><strong>Kinnor Live</strong><small>SUA IGREJA AO VIVO</small></span>
+          </a>
+          <p class="footer-pitch">Programa gratuito para igrejas: câmeras sem fio com celulares, som da mesa nos fones e nos stories, e o culto ao vivo em todas as redes.</p>
+          <div class="footer-ministry">
+            <img src="assets/img/ministerio.webp" width="48" height="48" loading="lazy" alt="Logo do Ministério AD Palmares" />
+            <p>Feito com fé no Ministério AD Palmares.</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h2>Soluções</h2>
+          <a href="camera-para-igreja">Câmera para igreja grátis</a>
+          <a href="stories-com-audio-da-mesa">Stories com o som da mesa</a>
+          <a href="transmissao-ao-vivo-para-igrejas">Transmissão ao vivo</a>
+          <a href="retorno-de-audio-no-celular">Retorno de áudio no celular</a>
+          <a href="como-transmitir-culto-com-celular">Como transmitir o culto</a>
+        </div>
+        <div class="footer-links">
+          <h2>Kinnor Live</h2>
+          <a href="download">Downloads</a>
+          <a href="suporte">Suporte</a>
+          <a href="./#sobre">Nossa história</a>
+          <a href="./#apoie">Apoie o projeto</a>
+          <a href="privacidade">Privacidade</a>
+          <a href="termos">Termos de uso</a>
+          <button type="button" class="footer-cookie" data-cookie-settings hidden>Preferências de cookies</button>
+        </div>
+        <div class="footer-downloads">
+          <h2>Baixe grátis</h2>
+          <a class="footer-win-link" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Setup-1.1.2.exe" data-win-download>
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+            Kinnor Live para Windows
+          </a>
+          <a class="store-badge" href="download#android" data-store="android" aria-label="Disponível no Google Play">
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#play"></use></svg>
+            <span><small>DISPONÍVEL NO</small><strong>Google Play</strong></span>
+          </a>
+          <a class="store-badge" href="download#iphone" data-store="ios" aria-label="Baixar na App Store">
+            <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#apple"></use></svg>
+            <span><small>Baixar na</small><strong>App Store</strong></span>
+          </a>
+          <h2 class="footer-contact-title">Contato</h2>
+          <div class="footer-contact" data-contact data-contact-context="footer">Os canais de contato serão publicados em breve.</div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year>2026</span> Kinnor Live · Feito no Brasil</span>
+        <span>Versão <span data-version>1.1.2</span></span>
+      </div>
+    </footer>
+
+    <div class="download-toast" role="status" aria-live="polite" data-download-toast hidden>
+      <span>Seu download começou.</span>
+      <a href="download#instalar">Ver como instalar</a>
+      <button type="button" aria-label="Fechar aviso" data-toast-close>×</button>
+    </div>
+
+    <div class="cookie-banner" role="region" aria-label="Aviso de cookies" data-cookie-banner hidden>
+      <p>Usamos cookies do Google Analytics para entender, de forma agregada, como o site é usado. Você escolhe. <a href="privacidade#cookies">Saiba mais</a>.</p>
+      <div>
+        <button type="button" class="button button-sm button-ghost" data-cookie-choice="recusado">Recusar</button>
+        <button type="button" class="button button-sm" data-cookie-choice="aceito">Aceitar</button>
+      </div>
+    </div>
+
+    <dialog class="store-dialog" data-store-dialog aria-labelledby="dialog-title" aria-describedby="dialog-text">
+      <div class="dialog-inner">
+        <button type="button" class="dialog-close" aria-label="Fechar" data-dialog-close>×</button>
+        <div class="dialog-icon"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg></div>
+        <h2 id="dialog-title" data-dialog-title>Em breve</h2>
+        <p id="dialog-text" data-dialog-text></p>
+        <a class="button" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.1.2/KinnorLive-Android-1.1.2.apk" data-apk-download data-dialog-apk>
+          Instalar o app Android direto
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
+        </a>
+        <button type="button" class="text-button" data-dialog-close>Entendi</button>
+      </div>
+    </dialog>
+    <!-- /RODAPÉ -->
+  </body>
+</html>

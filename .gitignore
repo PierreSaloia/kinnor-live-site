@@ -1,0 +1,10 @@
+# Instaladores ficam nas Releases do GitHub (arquivos grandes demais para o repositório)
+instaladores/
+public/downloads/
+# Anotações internas e temporários
+BRIEFING.md
+.npm-cache/
+.wrangler/
+node_modules/
+_capturas/
+*.log
