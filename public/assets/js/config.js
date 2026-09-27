@@ -16,7 +16,7 @@ export const KINNOR = {
 
   windows: {
     arquivo: 'KinnorLive-Setup-1.2.0.exe',
-    tamanhoBytes: 186354185,
+    tamanhoBytes: 186354263,
     requisitos: 'Windows 10 ou 11 (64 bits)'
   },
   android: {

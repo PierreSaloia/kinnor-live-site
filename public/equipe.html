@@ -26,8 +26,8 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="preload" href="assets/fonts/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/fonts/outfit-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="assets/css/site.css?v=199273fcd5" data-asset />
-    <script type="module" src="assets/js/main.js?v=199273fcd5" data-asset></script>
+    <link rel="stylesheet" href="assets/css/site.css?v=143afa1667" data-asset />
+    <script type="module" src="assets/js/main.js?v=143afa1667" data-asset></script>
   </head>
   <body>
     <!-- CABEÇALHO -->
@@ -240,6 +240,47 @@
             <li>
               <h3>Primeira abertura</h3>
               <p>Permita câmera, microfone e <strong>rede local</strong>. Conecte pelo QR Code da tela do programa, igual ao Android.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- CENAS DO CULTO E PLANO B -->
+      <section class="section how-section" id="cenas">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">NOVO NA VERSÃO 1.2.0</p>
+            <h2>Cenas do culto, letras e Bíblia <span class="accent">já instaladas.</span></h2>
+            <p>O programa novo já vem com as 14 cenas da AD Palmares (contagem regressiva, boas-vindas, oração, louvor com e sem letra, leitura da Palavra, pregação, ofertas, avisos, Santa Ceia, encerramento…). Elas se instalam sozinhas na primeira abertura.</p>
+          </div>
+          <ol class="guide-steps prose">
+            <li>
+              <h3>Tela “Louvor e Palavra”</h3>
+              <p>No menu da esquerda. Em cima, as <strong>cenas do culto</strong>: um clique coloca no ar. Embaixo, três abas:</p>
+              <ul>
+                <li><strong>Louvor:</strong> clique em <strong>Nova</strong>, cole a letra e deixe uma linha em branco entre as partes. Clique numa parte para mostrar; as setas do teclado passam; <strong>Esc</strong> esconde.</li>
+                <li><strong>Bíblia:</strong> digite a referência (ex.: <strong>Jo 3:16</strong>, <strong>Sl 23</strong>, <strong>Rm 8:28-30</strong>) e clique no versículo. Shift+clique mostra um trecho. “Texto livre” mostra o texto de qualquer outra versão.</li>
+                <li><strong>Contagem:</strong> escolha o horário do culto ou 5/10/15 minutos.</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Ajustes finos</h3>
+              <p>Na tela <strong>Transmissão</strong>, cada cena é feita de peças separadas (fundo, câmera, logo, letra, legenda): arraste na prévia para mover, dê duplo clique para editar texto, cor e <strong>opacidade do fundo da letra</strong>. Edite a fonte “Nome do pregador” antes do culto.</p>
+            </li>
+            <li>
+              <h3>Se as cenas não aparecerem</h3>
+              <p>Transmissão › quadro <strong>Cenas</strong> › botão do pacote › <strong>Instalar cenas da AD Palmares</strong>. Ou baixe o arquivo abaixo e use “Abrir arquivo de cenas”.</p>
+              <div class="dl-row"><a class="button button-sm" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.2.0/Cenas-AD-Palmares.kinnorcenas"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>Pacote de cenas da AD Palmares</a></div>
+            </li>
+            <li>
+              <h3>Plano B: transmitir pelo OBS</h3>
+              <p>Se a transmissão pelo Kinnor Live não funcionar, o OBS pode transmitir a imagem pronta (com letras, Bíblia, contagem e logo):</p>
+              <ul>
+                <li>No Kinnor Live: Transmissão › <strong>Enviar para outro programa</strong> (ligar) › webcam <strong>Kinnor Live Câmera 4</strong> (use uma câmera sem celular).</li>
+                <li>No OBS: Fontes › + › <strong>Dispositivo de captura de vídeo</strong> › “Kinnor Live Câmera 4”, resolução 1920×1080, e ajuste para ocupar a tela.</li>
+                <li>Áudio no OBS: <strong>Captura de entrada de áudio</strong> da mesa. Se o som vier adiantado, use “Atraso de sincronização” de 150 a 300 ms.</li>
+                <li>As cenas, letras e versículos continuam sendo trocados no Kinnor Live; o OBS só transmite.</li>
+              </ul>
             </li>
           </ol>
         </div>
