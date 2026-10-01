@@ -215,6 +215,10 @@ function faqSchema(html) {
     '  Cache-Control: public, max-age=86400',
     '/sitemap.xml',
     '  Cache-Control: public, max-age=3600',
+    // Instruções para o agente (texto com acentos) — fora do Google.
+    '/agente-iphone.txt',
+    '  Content-Type: text/plain; charset=utf-8',
+    '  X-Robots-Tag: noindex',
     '',
   ];
   fs.writeFileSync(path.join(root, '_headers'), headers.join('\n'), 'utf8');
