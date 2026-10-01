@@ -1,0 +1,117 @@
+# Instruções para o agente (Codex): preparar o computador da igreja para instalar o Kinnor Live no iPhone
+
+Você está num computador **Windows 10/11** da igreja. Objetivo: deixar este computador pronto para instalar o app
+**Kinnor Live** (iPhone, versão 1.5.0) pela **AltStore**, e para renovar o app a cada 7 dias.
+Tudo o que é no computador é com você. O que é **dentro do iPhone** e a **senha do Apple ID** são com a pessoa
+(ela vai digitar). Nunca digite, peça ou guarde o Apple ID ou a senha: quem digita é a pessoa.
+
+Fale com a pessoa em português do Brasil, simples (ela é voluntária de igreja, não técnica).
+Peça confirmação antes de: desinstalar qualquer programa, reiniciar o computador, mudar Firewall ou rede.
+
+---
+
+## Parte A — Conferir o que já existe
+
+Rode no PowerShell e anote o resultado:
+
+```powershell
+Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*, HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* |
+  Where-Object { $_.DisplayName -match 'Apple|iTunes|iCloud|AltServer|Bonjour|Kinnor' } | Select DisplayName, DisplayVersion
+Get-AppxPackage *iTunes*, *iCloud*, *AppleDevices* | Select Name, Version
+Get-Service "Apple Mobile Device Service","Bonjour Service" -ErrorAction SilentlyContinue | Select Name, Status
+Get-NetConnectionProfile | Select Name, InterfaceAlias, NetworkCategory
+```
+
+**Regra importante:** o AltServer só funciona com o **iTunes e o iCloud baixados do site da Apple** (instaladores .exe),
+**não** com as versões da Microsoft Store (`Get-AppxPackage` acima). Se houver versões da Microsoft Store
+(iTunes, iCloud ou "Apple Devices"), explique isso à pessoa e, **com a autorização dela**, desinstale-as antes de continuar.
+
+## Parte B — Instalar (nesta ordem; pule o que já estiver instalado na versão do site da Apple)
+
+Baixe para `%USERPROFILE%\Downloads\kinnor-iphone\`:
+
+| # | Programa | Endereço |
+|---|---|---|
+| 1 | iTunes (64 bits, site da Apple) | https://www.apple.com/itunes/download/win64 |
+| 2 | iCloud para Windows (site da Apple, versão que funciona com o AltServer) | https://updates.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe |
+| 3 | AltServer para Windows (altstore.io) | https://cdn.altstore.io/file/altstore/altinstaller.zip |
+
+1. Instale o **iTunes** (pode precisar de administrador; aceite os padrões).
+2. Instale o **iCloud** (não precisa entrar com conta no iCloud: basta estar instalado). Se pedir reinício, avise a pessoa e reinicie com o ok dela.
+3. Extraia o `altinstaller.zip` e rode o `Setup.exe` que está dentro (pasta padrão: `C:\Program Files (x86)\AltServer\`).
+4. Confira que os serviços **Apple Mobile Device Service** e **Bonjour Service** estão `Running` (o iTunes instala os dois).
+
+## Parte C — Deixar o AltServer sempre pronto
+
+1. **Abrir com o Windows** (igual ao computador onde o app foi preparado):
+   ```powershell
+   New-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Run -Name AltServer -Value 'C:\Program Files (x86)\AltServer\AltServer.exe' -PropertyType String -Force
+   ```
+2. **Liberar no Firewall** (com o ok da pessoa; precisa de PowerShell como administrador). Sem isso o iPhone não acha o AltServer pelo Wi-Fi:
+   ```powershell
+   $alt = 'C:\Program Files (x86)\AltServer\AltServer.exe'
+   netsh advfirewall firewall delete rule name="AltServer (Kinnor Live)" | Out-Null
+   netsh advfirewall firewall add rule name="AltServer (Kinnor Live)" dir=in  action=allow program="$alt" enable=yes profile=private,public
+   netsh advfirewall firewall add rule name="AltServer (Kinnor Live)" dir=out action=allow program="$alt" enable=yes profile=private,public
+   ```
+3. Se o Wi-Fi da igreja estiver como **Public** e a pessoa concordar, pode marcar como privada (opcional; a regra acima já cobre as duas):
+   `Set-NetConnectionProfile -InterfaceAlias "<nome do adaptador Wi-Fi>" -NetworkCategory Private`
+4. **Abra o AltServer** (`Start-Process 'C:\Program Files (x86)\AltServer\AltServer.exe'`). Aparece um losango perto do relógio
+   (às vezes escondido na setinha ^). Confira que está ouvindo na rede:
+   ```powershell
+   Get-NetTCPConnection -State Listen -OwningProcess (Get-Process AltServer).Id | Select LocalAddress, LocalPort
+   ```
+   Deve aparecer `0.0.0.0` com uma porta alta (ex.: 51772). Se o Windows mostrar uma janela do Firewall sobre o AltServer, peça à pessoa para clicar em **Permitir**.
+5. Abra o **iTunes** uma vez e o **iCloud** uma vez (e feche) — isso evita o erro de iCloud do AltServer na primeira instalação.
+
+## Parte D — Opcional: programa Kinnor Live no computador (para testar o app depois)
+
+Se este computador ainda não tem o programa Kinnor Live 1.5.0 e a pessoa quiser testar aqui:
+https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.0/KinnorLive-Setup-1.5.0.exe
+(instalador normal do Windows; o programa também precisa de "Permitir" no Firewall quando abrir).
+
+## Parte E — Junto com a pessoa: o iPhone (ela faz no iPhone, você guia e cuida do computador)
+
+Leia em voz alta / mostre um passo por vez e espere a pessoa dizer que terminou:
+
+1. **Cabo**: ligar o iPhone no computador, desbloquear, tocar em **Confiar** e digitar o código do iPhone.
+2. **iTunes** (você pode clicar no computador): ícone do iPhone (canto superior esquerdo) › **Resumo** › marcar
+   **Sincronizar com este iPhone via Wi-Fi** › **Aplicar**.
+3. **AltServer** (você clica no computador): losango › **Install AltStore** › escolher o iPhone.
+   Aparece a janela pedindo Apple ID e senha: **a pessoa digita** (vão só para a Apple). Se chegar um código no iPhone,
+   a pessoa digita no computador. Espere a notificação **Installation Succeeded**.
+4. **No iPhone**: Ajustes › Geral › **VPN e Gerenciamento de Dispositivos** › tocar no Apple ID › **Confiar**.
+5. **No iPhone**: Ajustes › Privacidade e Segurança › **Modo de Desenvolvedor** › ligar. O iPhone reinicia; depois tocar em **Ativar**.
+6. **No iPhone**: abrir a **AltStore**. Se pedir, entrar com o mesmo Apple ID (aba Configurações).
+7. **No iPhone**, no Safari, abrir o link abaixo e tocar em **Adicionar na AltStore**:
+   https://kinnor-live.servidor-doacoes.workers.dev/equipe#parte-3
+   (ou, na AltStore: **Fontes** › **+** › colar `https://kinnor-live.servidor-doacoes.workers.dev/altstore.json`)
+   Na fonte **Kinnor Live**: tocar no app › **Obter**. O iPhone precisa estar no mesmo Wi-Fi do computador (ou no cabo).
+8. **No iPhone**: abrir o Kinnor Live e permitir câmera, microfone, rede local e fotos.
+
+## Parte F — Testes (com o programa Kinnor Live aberto no computador)
+
+1. Conectar o iPhone pelo QR Code que aparece no programa.
+2. **Ouvir a mesa** no fone; bloquear a tela uns minutos (o som deve continuar).
+3. **Gravar com a mesa**: gravar um trecho e conferir se a boca bate com o som.
+4. Gravando com a mesa: a imagem aparece no computador (câmera do stories) e o iPhone mostra **"Você está na live"**.
+5. **Webcam**: o iPhone aparece como "Kinnor Live Câmera N" no programa.
+
+Anote o modelo do iPhone, a versão do iOS e o que não funcionou (com a mensagem exata), e entregue um resumo à pessoa.
+
+## Se der problema
+
+- **"Could not find AltServer"** no iPhone: mesmo Wi-Fi? AltServer aberto? Regra do Firewall criada? Teste com o iPhone no cabo.
+- **iPhone não aparece no menu do AltServer**: abrir o iTunes com o iPhone no cabo e tocar em Confiar de novo; conferir o serviço Apple Mobile Device.
+- **Erro de iCloud / "Make sure iCloud is installed"**: iCloud tem que ser o do site da Apple (link 2), não o da Microsoft Store.
+- **"Maximum number of apps"**: com Apple ID gratuito são no máximo 3 apps pela AltStore (a própria AltStore conta 1).
+- Alternativa se a AltStore não der certo: **Sideloadly** (https://sideloadly.io/SideloadlySetup64.exe) instala pelo cabo o arquivo
+  https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.0/KinnorLive-iPhone-1.5.0.ipa
+  (também com o Apple ID que a pessoa digita).
+
+## Depois da instalação (explique à pessoa)
+
+- Com Apple ID gratuito o app vale **7 dias**. Ele se renova sozinho quando o iPhone está no mesmo Wi-Fi deste computador
+  com o AltServer aberto. Se o app parar de abrir: AltStore › **Meus Apps** › **Atualizar tudo**.
+- Por isso este computador (com o AltServer) precisa ficar na igreja e ser ligado pelo menos uma vez por semana.
+- Versões novas do Kinnor Live aparecem na AltStore › **Meus Apps** › **Atualizar**.
