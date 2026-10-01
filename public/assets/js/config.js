@@ -6,8 +6,8 @@ export const KINNOR = {
   // Endereço público do site, sem barra no final.
   site: { url: 'https://kinnor-live.servidor-doacoes.workers.dev' },
 
-  versao: '1.3.0',
-  dataVersao: '2026-09-29',
+  versao: '1.4.0',
+  dataVersao: '2026-10-01',
 
   // Pasta de onde os botões baixam os instaladores. {versao} vira a versão acima.
   // No GitHub Releases o arquivo baixa direto, sem abrir o GitHub.
@@ -15,8 +15,8 @@ export const KINNOR = {
   downloads: 'https://github.com/PierreSaloia/kinnor-live-site/releases/download/v{versao}/',
 
   windows: {
-    arquivo: 'KinnorLive-Setup-1.3.0.exe',
-    tamanhoBytes: 186182549,
+    arquivo: 'KinnorLive-Setup-1.4.0.exe',
+    tamanhoBytes: 191185213,
     requisitos: 'Windows 10 ou 11 (64 bits)'
   },
   android: {
