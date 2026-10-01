@@ -1,0 +1,54 @@
+{
+  "name": "Kinnor Live",
+  "identifier": "br.com.kinnorlive.fonte",
+  "subtitle": "Mídia da igreja no celular",
+  "description": "App do Kinnor Live para iPhone: câmera da transmissão, gravar com o som da mesa e ouvir a mesa no fone. Funciona junto com o programa Kinnor Live para Windows.",
+  "iconURL": "https://kinnor-live.servidor-doacoes.workers.dev/assets/img/icon-512.png",
+  "headerURL": "https://kinnor-live.servidor-doacoes.workers.dev/assets/img/og-kinnor-live.png",
+  "website": "https://kinnor-live.servidor-doacoes.workers.dev",
+  "tintColor": "#3B82F6",
+  "featuredApps": [
+    "br.com.kinnorlive.app"
+  ],
+  "apps": [
+    {
+      "name": "Kinnor Live",
+      "bundleIdentifier": "br.com.kinnorlive.app",
+      "developerName": "Kinnor Live",
+      "subtitle": "Mídia da igreja no celular",
+      "localizedDescription": "O Kinnor Live transforma os celulares da equipe em ferramentas da mídia da igreja, junto com o programa Kinnor Live para Windows.\n\n• GRAVAR COM A MESA: vídeos com o som limpo da mesa de som, prontos para stories e reels. A imagem também pode ir para a live.\n• WEBCAM: o iPhone vira uma câmera do computador da transmissão.\n• OUVIR A MESA: retorno do som da mesa no fone, com qualidade de música, mesmo com a tela bloqueada.\n• CÂMERA: fotos e vídeos com o som do próprio iPhone.\n\nConecta pelo QR Code do programa. Nada é coletado: tudo fica na rede da igreja.",
+      "iconURL": "https://kinnor-live.servidor-doacoes.workers.dev/assets/img/icon-512.png",
+      "tintColor": "#3B82F6",
+      "category": "photo-video",
+      "screenshots": [
+        "https://kinnor-live.servidor-doacoes.workers.dev/assets/img/iphone-1.jpg",
+        "https://kinnor-live.servidor-doacoes.workers.dev/assets/img/iphone-2.jpg",
+        "https://kinnor-live.servidor-doacoes.workers.dev/assets/img/iphone-3.jpg",
+        "https://kinnor-live.servidor-doacoes.workers.dev/assets/img/iphone-4.jpg"
+      ],
+      "versions": [
+        {
+          "version": "1.5.0",
+          "buildVersion": "6",
+          "date": "2026-10-01",
+          "localizedDescription": "Câmera do stories: gravando com a mesa, a imagem também vai para a live. O computador mostra na prévia e o operador decide se coloca no ar.\nSelo \"Você está na live\" enquanto a imagem está no computador.\nLiga e desliga em Ajustes rápidos › Câmera do stories. O vídeo gravado no celular não muda.",
+          "downloadURL": "https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.0/KinnorLive-iPhone-1.5.0.ipa",
+          "size": 7136977,
+          "sha256": "e603f513e16a8965297a01975ab5636e2fd1f52105aae930e2855a4ae99150a7",
+          "minOSVersion": "16.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSCameraUsageDescription": "O Kinnor Live usa a câmera para filmar, tirar fotos, ler o QR Code do computador e enviar a imagem ao computador da mídia (modo Webcam).",
+          "NSMicrophoneUsageDescription": "O microfone é usado só no modo Câmera, para gravar vídeos com o som do iPhone. Nos outros modos o som vem da mesa.",
+          "NSPhotoLibraryAddUsageDescription": "Para salvar na galeria os vídeos e as fotos que você gravar.",
+          "NSPhotoLibraryUsageDescription": "Para organizar seus vídeos e fotos no álbum \"Kinnor Live\".",
+          "NSLocalNetworkUsageDescription": "Para encontrar e se conectar ao computador da mídia (Kinnor Live) no Wi-Fi da igreja: receber o som da mesa e enviar a imagem da câmera."
+        }
+      }
+    }
+  ],
+  "news": []
+}

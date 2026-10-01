@@ -26,8 +26,8 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="preload" href="assets/fonts/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/fonts/outfit-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="assets/css/site.css?v=fb385f42be" data-asset />
-    <script type="module" src="assets/js/main.js?v=fb385f42be" data-asset></script>
+    <link rel="stylesheet" href="assets/css/site.css?v=f75c3d9c7e" data-asset />
+    <script type="module" src="assets/js/main.js?v=f75c3d9c7e" data-asset></script>
   </head>
   <body>
     <!-- CABEÇALHO -->
@@ -106,7 +106,7 @@
               <div class="feature-icon amber"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#apple"></use></svg></div>
               <h3>iPhones (teste)</h3>
               <p>Instalado pelo AltStore · <span data-ipa-requirements>iOS 16 ou mais novo</span> · <span data-ipa-size>7 MB</span></p>
-              <a class="button full" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.0/KinnorLive-iPhone-1.3.0-sem-assinatura.ipa" data-ipa-download>
+              <a class="button full" href="https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.0/KinnorLive-iPhone-1.5.0.ipa" data-ipa-download>
                 <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>
                 Baixar para iPhone (.ipa)
               </a>
@@ -244,7 +244,11 @@
             </li>
             <li>
               <h3>Instale o Kinnor Live</h3>
-              <p>No Safari do iPhone, abra esta página e toque em <strong>Baixar para iPhone</strong> (o arquivo vai para o app Arquivos). Abra o <strong>AltStore</strong> › <strong>Meus Apps</strong> › <strong>+</strong> › escolha o arquivo do Kinnor Live. O iPhone precisa estar no mesmo Wi-Fi do notebook, com o AltServer aberto.</p>
+              <p>No Safari do iPhone, abra esta página e toque em <strong>Adicionar na AltStore</strong>. A AltStore abre com a fonte do Kinnor Live: toque em <strong>Kinnor Live</strong> › <strong>Obter</strong>. As próximas versões aparecem sozinhas em <strong>Meus Apps</strong> › <strong>Atualizar</strong>. O iPhone precisa estar no mesmo Wi-Fi do notebook, com o AltServer aberto.</p>
+              <div class="dl-row">
+                <a class="button button-sm" href="altstore://source?url=https://kinnor-live.servidor-doacoes.workers.dev/altstore.json"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#download"></use></svg>Adicionar na AltStore</a>
+              </div>
+              <p class="muted small-note">Se o botão não abrir a AltStore: na AltStore toque em <strong>Fontes</strong> › <strong>+</strong> e cole <strong>https://kinnor-live.servidor-doacoes.workers.dev/altstore.json</strong>. Outra forma: toque em <strong>Baixar para iPhone</strong> (o arquivo vai para o app Arquivos) e, na AltStore, <strong>Meus Apps</strong> › <strong>+</strong> › escolha o arquivo do Kinnor Live.</p>
             </li>
             <li>
               <h3>Primeira abertura</h3>
@@ -292,13 +296,13 @@
               </ul>
             </li>
             <li>
-              <h3>Plano B: transmitir pelo OBS</h3>
-              <p>Se a transmissão pelo Kinnor Live não funcionar, o OBS pode transmitir a imagem pronta (com letras, Bíblia, contagem e logo):</p>
+              <h3>Plano B: transmitir por outro programa</h3>
+              <p>Se a transmissão pelo Kinnor Live não funcionar, outro programa de transmissão pode transmitir a imagem pronta (com letras, Bíblia, contagem e logo):</p>
               <ul>
                 <li>No Kinnor Live: Transmissão › <strong>Enviar para outro programa</strong> (ligar) › webcam <strong>Kinnor Live Câmera 4</strong> (use uma câmera sem celular).</li>
-                <li>No OBS: Fontes › + › <strong>Dispositivo de captura de vídeo</strong> › “Kinnor Live Câmera 4”, resolução 1920×1080, e ajuste para ocupar a tela.</li>
-                <li>Áudio no OBS: <strong>Captura de entrada de áudio</strong> da mesa. Se o som vier adiantado, use “Atraso de sincronização” de 150 a 300 ms.</li>
-                <li>As cenas, letras e versículos continuam sendo trocados no Kinnor Live; o OBS só transmite.</li>
+                <li>No outro programa: Fontes › + › <strong>Dispositivo de captura de vídeo</strong> › “Kinnor Live Câmera 4”, resolução 1920×1080, e ajuste para ocupar a tela.</li>
+                <li>Áudio no outro programa: <strong>Captura de entrada de áudio</strong> da mesa. Se o som vier adiantado, use “Atraso de sincronização” de 150 a 300 ms.</li>
+                <li>As cenas, letras e versículos continuam sendo trocados no Kinnor Live; o outro programa só transmite.</li>
               </ul>
             </li>
           </ol>

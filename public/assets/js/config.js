@@ -27,9 +27,9 @@ export const KINNOR = {
   },
   ios: {
     appStore: '', // Cole o link da App Store quando o app for publicado.
-    // App de teste (sem assinatura), instalado pelo AltStore — só na página /instalar.
-    ipa: 'KinnorLive-iPhone-1.3.0-sem-assinatura.ipa',
-    tamanhoBytes: 7031829,
+    // App de teste, instalado pela AltStore (fonte: /altstore.json, gerada por ferramentas/fonte-altstore.mjs).
+    ipa: 'KinnorLive-iPhone-1.5.0.ipa',
+    tamanhoBytes: 7136977,
     requisitos: 'iOS 16 ou mais novo'
   },
 

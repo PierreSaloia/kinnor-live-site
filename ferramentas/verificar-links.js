@@ -24,7 +24,7 @@ for (const page of pages) {
   for (const m of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) values.push(m[1]);
   for (const m of html.matchAll(/\bsrcset="([^"]+)"/g)) m[1].split(',').forEach((part) => values.push(part.trim().split(/\s+/)[0]));
   for (const value of values) {
-    if (/^(?:https?:|mailto:|tel:|data:|javascript:)/i.test(value)) continue;
+    if (/^(?:https?:|mailto:|tel:|data:|javascript:|altstore:)/i.test(value)) continue;
     checked += 1;
     const [, fragment] = value.split('#');
     const target = resolveTarget(value) || path.join(root, page);
