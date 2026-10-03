@@ -6,8 +6,8 @@ export const KINNOR = {
   // Endereço público do site, sem barra no final.
   site: { url: 'https://kinnor-live.servidor-doacoes.workers.dev' },
 
-  versao: '1.5.0',
-  dataVersao: '2026-10-01',
+  versao: '1.5.1',
+  dataVersao: '2026-10-03',
 
   // Pasta de onde os botões baixam os instaladores. {versao} vira a versão acima.
   // No GitHub Releases o arquivo baixa direto, sem abrir o GitHub.
@@ -15,21 +15,21 @@ export const KINNOR = {
   downloads: 'https://github.com/PierreSaloia/kinnor-live-site/releases/download/v{versao}/',
 
   windows: {
-    arquivo: 'KinnorLive-Setup-1.5.0.exe',
-    tamanhoBytes: 192109166,
+    arquivo: 'KinnorLive-Setup-1.5.1.exe',
+    tamanhoBytes: 192193558,
     requisitos: 'Windows 10 ou 11 (64 bits)'
   },
   android: {
     playStore: '', // Cole o link da Google Play quando o app for publicado.
-    apk: 'KinnorLive-Android-1.5.0.apk',
-    tamanhoBytes: 39741111,
+    apk: 'KinnorLive-Android-1.5.1.apk',
+    tamanhoBytes: 39778712,
     requisitos: 'Android 10 ou superior'
   },
   ios: {
     appStore: '', // Cole o link da App Store quando o app for publicado.
     // App de teste, instalado pela AltStore (fonte: /altstore.json, gerada por ferramentas/fonte-altstore.mjs).
-    ipa: 'KinnorLive-iPhone-1.5.0.ipa',
-    tamanhoBytes: 7136977,
+    ipa: 'KinnorLive-iPhone-1.5.1.ipa',
+    tamanhoBytes: 7139491,
     requisitos: 'iOS 16 ou mais novo'
   },
 

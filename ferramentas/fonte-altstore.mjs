@@ -31,9 +31,9 @@ const privacy = {
 };
 
 const novidades = [
-  'Câmera do stories: gravando com a mesa, a imagem também vai para a live. O computador mostra na prévia e o operador decide se coloca no ar.',
-  'Selo "Você está na live" enquanto a imagem está no computador.',
-  'Liga e desliga em Ajustes rápidos › Câmera do stories. O vídeo gravado no celular não muda.',
+  'Botões de modo novos: Câmera, Gravar com a mesa e Webcam com ícone e nome inteiro (nada cortado com o celular em pé).',
+  'Webcam: a prévia mostra a imagem inteira, igual ao que o computador recebe (sem o zoom falso).',
+  'Câmera do stories: gravando com a mesa, a imagem também pode ir para a live.',
 ].join('\n');
 
 const shots = fs.readdirSync(path.join(here, '../public/assets/img'))

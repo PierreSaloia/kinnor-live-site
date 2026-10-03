@@ -28,13 +28,13 @@
       ],
       "versions": [
         {
-          "version": "1.5.0",
-          "buildVersion": "6",
-          "date": "2026-10-01",
-          "localizedDescription": "Câmera do stories: gravando com a mesa, a imagem também vai para a live. O computador mostra na prévia e o operador decide se coloca no ar.\nSelo \"Você está na live\" enquanto a imagem está no computador.\nLiga e desliga em Ajustes rápidos › Câmera do stories. O vídeo gravado no celular não muda.",
-          "downloadURL": "https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.0/KinnorLive-iPhone-1.5.0.ipa",
-          "size": 7136977,
-          "sha256": "e603f513e16a8965297a01975ab5636e2fd1f52105aae930e2855a4ae99150a7",
+          "version": "1.5.1",
+          "buildVersion": "7",
+          "date": "2026-10-03",
+          "localizedDescription": "Botões de modo novos: Câmera, Gravar com a mesa e Webcam com ícone e nome inteiro (nada cortado com o celular em pé).\nWebcam: a prévia mostra a imagem inteira, igual ao que o computador recebe (sem o zoom falso).\nCâmera do stories: gravando com a mesa, a imagem também pode ir para a live.",
+          "downloadURL": "https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.1/KinnorLive-iPhone-1.5.1.ipa",
+          "size": 7139491,
+          "sha256": "025c0b29a104ece68e5302695081800d6e17cb646f8c0704ff942ae488844ed3",
           "minOSVersion": "16.0"
         }
       ],
