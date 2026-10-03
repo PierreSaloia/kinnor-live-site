@@ -1,7 +1,7 @@
 # Instruções para o agente (Codex): preparar o computador da igreja para instalar o Kinnor Live no iPhone
 
 Você está num computador **Windows 10/11** da igreja. Objetivo: deixar este computador pronto para instalar o app
-**Kinnor Live** (iPhone, versão 1.5.0) pela **AltStore**, e para renovar o app a cada 7 dias.
+**Kinnor Live** (iPhone, versão 1.5.1) pela **AltStore**, e para renovar o app a cada 7 dias.
 Tudo o que é no computador é com você. O que é **dentro do iPhone** e a **senha do Apple ID** são com a pessoa
 (ela vai digitar). Nunca digite, peça ou guarde o Apple ID ou a senha: quem digita é a pessoa.
 
@@ -66,8 +66,8 @@ Baixe para `%USERPROFILE%\Downloads\kinnor-iphone\`:
 
 ## Parte D — Opcional: programa Kinnor Live no computador (para testar o app depois)
 
-Se este computador ainda não tem o programa Kinnor Live 1.5.0 e a pessoa quiser testar aqui:
-https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.0/KinnorLive-Setup-1.5.0.exe
+Se este computador ainda não tem o programa Kinnor Live 1.5.1 e a pessoa quiser testar aqui:
+https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.1/KinnorLive-Setup-1.5.1.exe
 (instalador normal do Windows; o programa também precisa de "Permitir" no Firewall quando abrir).
 
 ## Parte E — Junto com a pessoa: o iPhone (ela faz no iPhone, você guia e cuida do computador)
@@ -106,7 +106,7 @@ Anote o modelo do iPhone, a versão do iOS e o que não funcionou (com a mensage
 - **Erro de iCloud / "Make sure iCloud is installed"**: iCloud tem que ser o do site da Apple (link 2), não o da Microsoft Store.
 - **"Maximum number of apps"**: com Apple ID gratuito são no máximo 3 apps pela AltStore (a própria AltStore conta 1).
 - Alternativa se a AltStore não der certo: **Sideloadly** (https://sideloadly.io/SideloadlySetup64.exe) instala pelo cabo o arquivo
-  https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.0/KinnorLive-iPhone-1.5.0.ipa
+  https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.1/KinnorLive-iPhone-1.5.1.ipa
   (também com o Apple ID que a pessoa digita).
 
 ## Depois da instalação (explique à pessoa)
