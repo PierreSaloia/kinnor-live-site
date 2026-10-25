@@ -28,13 +28,23 @@
       ],
       "versions": [
         {
-          "version": "1.5.1",
-          "buildVersion": "7",
-          "date": "2026-10-03",
-          "localizedDescription": "Botões de modo novos: Câmera, Gravar com a mesa e Webcam com ícone e nome inteiro (nada cortado com o celular em pé).\nWebcam: a prévia mostra a imagem inteira, igual ao que o computador recebe (sem o zoom falso).\nCâmera do stories: gravando com a mesa, a imagem também pode ir para a live.",
-          "downloadURL": "https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.5.1/KinnorLive-iPhone-1.5.1.ipa",
-          "size": 7139491,
-          "sha256": "025c0b29a104ece68e5302695081800d6e17cb646f8c0704ff942ae488844ed3",
+          "version": "1.6.3",
+          "buildVersion": "10",
+          "date": "2026-10-23",
+          "localizedDescription": "Proporção 4:3 por padrão, com opção de 16:9, sem o recorte que parecia zoom.\nUltra prioriza a maior resolução que a câmera e o gravador aceitam.\nMostra o tamanho real da imagem capturada.",
+          "downloadURL": "https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.6.3/KinnorLive-iPhone-1.6.3.ipa",
+          "size": 7181770,
+          "sha256": "1309b1c96c58a67a7369e41e50bfaf3a1817e44f303ddf181591a6d7432d12e4",
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.6.2",
+          "buildVersion": "9",
+          "date": "2026-10-22",
+          "localizedDescription": "Gravação Ultra por padrão, até 4K quando suportado; qualidade de envio independente.\nEnvio adaptado à rede e ao aquecimento, com prioridade para a gravação local.\nAvisos de qualidade real, espaço e aquecimento; conexão salva e ajustes pelo computador.",
+          "downloadURL": "https://github.com/PierreSaloia/kinnor-live-site/releases/download/v1.6.2/KinnorLive-iPhone-1.6.2.ipa",
+          "size": 7171075,
+          "sha256": "47b6a03a9922292039b4a3f014b59c472cb8a4b9d66b564cb3ee9e2218a24e1b",
           "minOSVersion": "16.0"
         }
       ],
